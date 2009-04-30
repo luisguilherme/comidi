@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+jacarepagua:
+	nome: JACAREPAGUÁ
+leopoldina:
+	nome: LEOPOLDINA
+norte:
+	nome: NORTE
+oeste:
+	nome: OESTE
+suburbano:
+	nome: SUBURBANO
+sul:
+	nome: SUL
+urbano:
+	nome: URBANO

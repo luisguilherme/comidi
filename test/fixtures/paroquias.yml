@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  forania: 
+  bairro: MyString
+  num_de_comunidades: 1
+
+two:
+  nome: MyString
+  forania: 
+  bairro: MyString
+  num_de_comunidades: 1

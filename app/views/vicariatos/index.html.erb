@@ -1,0 +1,20 @@
+<h1>Listing vicariatos</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+  </tr>
+
+<% for vicariato in @vicariatos %>
+  <tr>
+    <td><%=h vicariato.nome %></td>
+    <td><%= link_to 'Show', vicariato %></td>
+    <td><%= link_to 'Edit', edit_vicariato_path(vicariato) %></td>
+    <td><%= link_to 'Destroy', vicariato, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New vicariato', new_vicariato_path %>

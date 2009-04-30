@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :paroquias
+
+  map.resources :foranias
+
+  map.resources :vicariatos
+
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

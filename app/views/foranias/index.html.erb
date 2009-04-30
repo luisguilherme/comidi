@@ -1,0 +1,22 @@
+<h1>Listing foranias</h1>
+
+<table>
+  <tr>
+    <th>Vicariato</th>
+    <th>Numero</th>
+  </tr>
+
+<% for forania in @foranias %>
+  <tr>
+    <td><%=h forania.vicariato.nome %></td>
+    <td><%=h forania.numero %></td>
+    <td><%= link_to 'Show', forania %></td>
+    <td><%= link_to 'Edit', edit_forania_path(forania) %></td>
+    <td><%= link_to 'Destroy', forania, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New forania', new_forania_path %>

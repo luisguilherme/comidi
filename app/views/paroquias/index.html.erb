@@ -1,0 +1,26 @@
+<h1>Listing paroquias</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Forania</th>
+    <th>Bairro</th>
+    <th>Num de comunidades</th>
+  </tr>
+
+<% for paroquia in @paroquias %>
+  <tr>
+    <td><%=h paroquia.nome %></td>
+    <td><%=h paroquia.forania.vicariato.nome + " - " + paroquia.forania.numero.to_s %></td>
+    <td><%=h paroquia.bairro %></td>
+    <td><%=h paroquia.num_de_comunidades %></td>
+    <td><%= link_to 'Show', paroquia %></td>
+    <td><%= link_to 'Edit', edit_paroquia_path(paroquia) %></td>
+    <td><%= link_to 'Destroy', paroquia, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New paroquia', new_paroquia_path %>

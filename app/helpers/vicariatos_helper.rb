@@ -1,0 +1,2 @@
+module VicariatosHelper
+end

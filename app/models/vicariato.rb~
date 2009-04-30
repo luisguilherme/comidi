@@ -1,0 +1,2 @@
+class Vicariato < ActiveRecord::Base
+end

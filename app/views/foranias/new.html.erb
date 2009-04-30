@@ -1,0 +1,19 @@
+<h1>New forania</h1>
+
+<% form_for(@forania) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :vicariato %><br />
+    <%= f.text_field :vicariato %>
+  </p>
+  <p>
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', foranias_path %>

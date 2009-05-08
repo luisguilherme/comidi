@@ -9,11 +9,34 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20090423230427) do
+ActiveRecord::Schema.define(:version => 20090504184041) do
 
   create_table "foranias", :force => true do |t|
     t.integer  "vicariato_id"
     t.integer  "numero"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "missionarios", :force => true do |t|
+    t.string   "nome"
+    t.date     "nascimento"
+    t.string   "endereco"
+    t.string   "bairro"
+    t.string   "cidade"
+    t.integer  "estado_id"
+    t.string   "cep"
+    t.string   "email"
+    t.string   "estado_civil"
+    t.string   "profissao"
+    t.text     "movimentos_pastorais"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "missionarios_sacramentos", :id => false, :force => true do |t|
+    t.integer  "missionario_id"
+    t.integer  "sacramento_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -23,6 +46,20 @@ ActiveRecord::Schema.define(:version => 20090423230427) do
     t.integer  "forania_id"
     t.string   "bairro"
     t.integer  "num_de_comunidades"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sacramentos", :force => true do |t|
+    t.string   "nome"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "telefones", :force => true do |t|
+    t.string   "tipo_telefone"
+    t.integer  "ddd"
+    t.integer  "numero"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

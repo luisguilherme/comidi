@@ -1,0 +1,40 @@
+<h1>Listing missionarios</h1>
+
+<table>
+  <tr>
+    <th>Nome</th>
+    <th>Nascimento</th>
+    <th>Endereco</th>
+    <th>Bairro</th>
+    <th>Cidade</th>
+    <th>Estado</th>
+    <th>Cep</th>
+    <th>Email</th>
+    <th>Estado civil</th>
+    <th>Profissao</th>
+    <th>Movimentos pastorais</th>
+  </tr>
+
+<% for missionario in @missionarios %>
+  <tr>
+    <td><%=h missionario.nome %></td>
+    <td><%=h missionario.nascimento %></td>
+    <td><%=h missionario.endereco %></td>
+    <td><%=h missionario.bairro %></td>
+    <td><%=h missionario.cidade %></td>
+    <td><%=h missionario.estado %></td>
+    <td><%=h missionario.cep %></td>
+    <td><%=h missionario.email %></td>
+    <td><%=h missionario.estado_civil %></td>
+    <td><%=h missionario.profissao %></td>
+    <td><%=h missionario.movimentos_pastorais %></td>
+    <td><%= link_to 'Show', missionario %></td>
+    <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
+    <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New missionario', new_missionario_path %>

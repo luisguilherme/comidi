@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :missionarios
+
   map.resources :paroquias
 
   map.resources :foranias

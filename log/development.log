@@ -8549,3 +8549,40 @@ Rendering template within layouts/paroquias
 Rendering paroquias/show
   [4;35;1mForania Load (0.5ms)[0m   [0mSELECT * FROM "foranias" WHERE ("foranias"."id" = 17) [0m
 Completed in 35ms (View: 19, DB: 1) | 200 OK [http://lgl.webhop.net/paroquias/101]
+  [4;36;1mSQL (2.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateVicariatos (20090423225231)
+Migrating to CreateForanias (20090423225327)
+Migrating to CreateParoquias (20090423230427)
+Migrating to CreateMissionarios (20090504183812)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (11.8ms)[0m   [0mCREATE TABLE "missionarios" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "nascimento" date, "endereco" varchar(255), "bairro" varchar(255), "cidade" varchar(255), "estado_id" integer, "cep" varchar(255), "email" varchar(255), "estado_civil" varchar(255), "profissao" varchar(255), "movimentos_pastorais" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090504183812')[0m
+Migrating to CreateTelefones (20090504183927)
+  [4;35;1mSQL (10.0ms)[0m   [0mCREATE TABLE "telefones" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "tipo_telefone" varchar(255), "ddd" integer, "numero" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (4.8ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090504183927')[0m
+Migrating to CreateSacramentos (20090504183958)
+  [4;35;1mSQL (19.2ms)[0m   [0mCREATE TABLE "sacramentos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "nome" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (6.9ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090504183958')[0m
+Migrating to CreateMissionarioSacramentoJoinTable (20090504184041)
+  [4;35;1mSQL (13.5ms)[0m   [0mCREATE TABLE "missionarios_sacramentos" ("missionario_id" integer, "sacramento_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (4.7ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20090504184041')[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.8ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("foranias")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("missionarios")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("missionarios_sacramentos")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("paroquias")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("sacramentos")[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mPRAGMA index_list("telefones")[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mPRAGMA index_list("vicariatos")[0m

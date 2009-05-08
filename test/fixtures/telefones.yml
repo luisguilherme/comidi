@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tipo_telefone: MyString
+  ddd: 1
+  numero: 1
+
+two:
+  tipo_telefone: MyString
+  ddd: 1
+  numero: 1

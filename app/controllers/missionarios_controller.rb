@@ -57,7 +57,9 @@ class MissionariosController < ApplicationController
   # PUT /missionarios/1
   # PUT /missionarios/1.xml
   def update
+    params[:missionario][:sacramento_ids] ||= []
     @missionario = Missionario.find(params[:id])
+    
 
     respond_to do |format|
       if @missionario.update_attributes(params[:missionario])

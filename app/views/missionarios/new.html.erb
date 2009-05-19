@@ -29,12 +29,11 @@
   </p>
   <p>
     <%= f.label :estado %><br />
-    <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla %>
+    <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } %>
   </p>
   <p>
     <%= f.label :paroquia %><br />
-    <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome }, :id,
-    :nome  %>
+    <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro %>
   </p>
   <p>
     <%= f.label :cep %><br />
@@ -46,11 +45,22 @@
   </p>
   <p>
     <%= f.label :estado_civil %><br />
-    <%= f.text_field :estado_civil %>
+    <%= f.select :estado_civil, [["Solteiro"],["Casado"],["Divorciado"],["Viúvo"]] %>
   </p>
   <p>
     <%= f.label :profissao %><br />
     <%= f.text_field :profissao %>
+  </p>
+
+  <p>
+    <%= f.label :sacramentos_recebidos %><br />
+    <% for sacramento in Sacramento.find(:all) %>
+    <div>
+      <%= check_box_tag "missionario[sacramento_ids][]", sacramento.id, 
+	  @missionario.sacramentos.include?(sacramento) %>
+      <%= sacramento.nome %>
+    </div>
+    <% end %>
   </p>
   <p>
     <%= f.label :movimentos_pastorais %><br />

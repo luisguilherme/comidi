@@ -9,7 +9,11 @@
   </p>
   <p>
     <%= f.label :nascimento %><br />
-    <%= f.date_select :nascimento %>
+    <%= f.date_select :nascimento, :start_year => 1900, :end_year =>
+    Time.now.year - 5, :use_month_names => [ 'Janeiro', 'Fevereiro',
+    'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
+    'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,
+    :year ], :default => -17.years.from_now %>
   </p>
   <p>
     <%= f.label :endereco %><br />
@@ -25,7 +29,12 @@
   </p>
   <p>
     <%= f.label :estado %><br />
-    <%= f.text_field :estado %>
+    <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla %>
+  </p>
+  <p>
+    <%= f.label :paroquia %><br />
+    <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome }, :id,
+    :nome  %>
   </p>
   <p>
     <%= f.label :cep %><br />

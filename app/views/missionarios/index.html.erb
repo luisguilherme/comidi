@@ -6,6 +6,7 @@
     <th>Nascimento</th>
     <th>Endereco</th>
     <th>Bairro</th>
+    <th>Paróquia</th>
     <th>Cidade</th>
     <th>Estado</th>
     <th>Cep</th>
@@ -21,8 +22,9 @@
     <td><%=h missionario.nascimento %></td>
     <td><%=h missionario.endereco %></td>
     <td><%=h missionario.bairro %></td>
+    <td><%=h missionario.paroquia.nome -%> - <%= missionario.paroquia.bairro %></td>
     <td><%=h missionario.cidade %></td>
-    <td><%=h missionario.estado %></td>
+    <td><%=h missionario.estado.sigla %></td>
     <td><%=h missionario.cep %></td>
     <td><%=h missionario.email %></td>
     <td><%=h missionario.estado_civil %></td>

@@ -1,56 +1,6 @@
-<h1>Editing missionario</h1>
+<h1>Editar dados de missionário</h1>
 
-<% form_for(@missionario) do |f| %>
-  <%= f.error_messages %>
+<%= render :partial => 'form' %>
 
-  <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
-  </p>
-  <p>
-    <%= f.label :nascimento %><br />
-    <%= f.date_select :nascimento %>
-  </p>
-  <p>
-    <%= f.label :endereco %><br />
-    <%= f.text_field :endereco %>
-  </p>
-  <p>
-    <%= f.label :bairro %><br />
-    <%= f.text_field :bairro %>
-  </p>
-  <p>
-    <%= f.label :cidade %><br />
-    <%= f.text_field :cidade %>
-  </p>
-  <p>
-    <%= f.label :estado %><br />
-    <%= f.text_field :estado %>
-  </p>
-  <p>
-    <%= f.label :cep %><br />
-    <%= f.text_field :cep %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :estado_civil %><br />
-    <%= f.text_field :estado_civil %>
-  </p>
-  <p>
-    <%= f.label :profissao %><br />
-    <%= f.text_field :profissao %>
-  </p>
-  <p>
-    <%= f.label :movimentos_pastorais %><br />
-    <%= f.text_area :movimentos_pastorais %>
-  </p>
-  <p>
-    <%= f.submit "Update" %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @missionario %> |
-<%= link_to 'Back', missionarios_path %>
+<%= link_to 'Mostrar', @missionario %> |
+<%= link_to 'Voltar', missionarios_path %>

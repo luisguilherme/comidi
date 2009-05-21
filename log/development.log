@@ -14250,3 +14250,2190 @@ Rendering template within layouts/missionarios
 Rendering missionarios/index
   [4;36;1mEstado Load (0.4ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
 Completed in 46ms (View: 23, DB: 1) | 200 OK [http://localhost/missionarios]
+
+
+Processing MissionariosController#index (for 127.0.0.1 at 2009-05-20 19:06:18) [GET]
+  [4;36;1mMissionario Load (1.1ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.4ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 46ms (View: 36, DB: 1) | 200 OK [http://localhost/Missionarios]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:06:24) [GET]
+  [4;36;1mMissionario Load (1.4ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 59ms (View: 34, DB: 2) | 200 OK [http://lgl.webhop.net/Missionarios]
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:06:56) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.6ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (41.9ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Completed in 258ms (View: 191, DB: 46) | 200 OK [http://lgl.webhop.net/missionarios/new]
+
+
+Processing MissionariosController#new (for 127.0.0.1 at 2009-05-20 19:11:48) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;35;1mEstado Load (2.2ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (24.6ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Completed in 119ms (View: 73, DB: 28) | 200 OK [http://localhost/missionarios/new]
+
+
+Processing MissionariosController#new (for 127.0.0.1 at 2009-05-20 19:12:00) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.2ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (24.1ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Completed in 111ms (View: 65, DB: 27) | 200 OK [http://localhost/missionarios/new]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:25:07) [GET]
+  [4;35;1mMissionario Load (1.4ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 134ms (View: 112, DB: 2) | 200 OK [http://lgl.webhop.net/missionarios/]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 19:25:09) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mMissionario Load (0.5ms)[0m   [0mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;36;1mEstado Load (2.2ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (27.8ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.3ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+Rendered missionarios/_form (86.2ms)
+Completed in 124ms (View: 94, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/3/edit]
+
+
+Processing MissionariosController#update (for 201.82.160.78 at 2009-05-20 19:25:18) [PUT]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"7dee520f3cc3953dac7dec2e635877851128ad5c", "id"=>"3", "missionario"=>{"endereco"=>"R. Alberto de Salvo, 112 fd", "nascimento(3i)"=>"7", "estado_id"=>"54", "cep"=>"13084-759", "nome"=>"Luís Guilherme Fernandes Pereira", "paroquia_id"=>"222", "bairro"=>"Jd. Santa Genebra II", "estado_civil"=>"Solteiro", "cidade"=>"Campinas", "movimentos_pastorais"=>"Comunidade católicos do orkut", "nascimento(1i)"=>"1983", "profissao"=>"Estudante", "email"=>"lg@luisguilherme.net", "nascimento(2i)"=>"2"}}
+  [4;35;1mMissionario Load (0.4ms)[0m   [0mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+  [4;36;1mSacramento Load (0.6ms)[0m   [0;1mSELECT * FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("missionarios_sacramentos".missionario_id = 3 ) [0m
+  [4;35;1mSQL (11.5ms)[0m   [0mDELETE FROM "missionarios_sacramentos" WHERE missionario_id = 3 AND sacramento_id IN (1,2,3)[0m
+  [4;36;1mEstado Load (0.4ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;35;1mMissionario Exists (0.2ms)[0m   [0mSELECT "missionarios".id FROM "missionarios" WHERE ("missionarios"."email" = 'lg@luisguilherme.net' AND "missionarios".id <> 3) LIMIT 1[0m
+Redirected to #<Missionario:0xb66e0d28>
+Completed in 130ms (DB: 13) | 302 Found [http://lgl.webhop.net/missionarios/3]
+
+
+Processing MissionariosController#show (for 201.82.160.78 at 2009-05-20 19:25:18) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMissionario Load (0.5ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/show
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 39ms (View: 17, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/3]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:25:28) [GET]
+  [4;36;1mMissionario Load (0.8ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 32ms (View: 16, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 19:25:35) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMissionario Load (0.5ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;35;1mEstado Load (2.6ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (36.0ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+Rendered missionarios/_form (104.6ms)
+Completed in 127ms (View: 115, DB: 0) | 200 OK [http://lgl.webhop.net/missionarios/3/edit]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:27:06) [GET]
+  [4;36;1mMissionario Load (0.8ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 34ms (View: 16, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 19:27:08) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMissionario Load (0.5ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;35;1mEstado Load (5.2ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (30.1ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+Rendered missionarios/_form (99.2ms)
+Completed in 131ms (View: 105, DB: 0) | 200 OK [http://lgl.webhop.net/missionarios/3/edit]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 19:27:19) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mMissionario Load (0.5ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 3) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;35;1mEstado Load (2.2ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (25.2ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 3 ) LIMIT 1[0m
+Rendered missionarios/_form (84.2ms)
+Completed in 105ms (View: 91, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/3/edit]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:28:37) [GET]
+  [4;36;1mMissionario Load (1.4ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.5ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 49ms (View: 29, DB: 2) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:30:46) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.2ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (44.9ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (3.5ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.3ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Rendered missionarios/_form (142.0ms)
+Completed in 174ms (View: 96, DB: 52) | 200 OK [http://lgl.webhop.net/missionarios/new]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 19:32:22) [GET]
+  [4;35;1mMissionario Load (0.9ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+Completed in 111ms (View: 22, DB: 1) | 200 OK [http://lgl.webhop.net/Missionarios]
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:32:24) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;35;1mEstado Load (2.2ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (28.1ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (1.3ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Rendered missionarios/_form (85.9ms)
+Completed in 105ms (View: 59, DB: 33) | 200 OK [http://lgl.webhop.net/missionarios/new]
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:52:18) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+ERROR: compiling _run_erb_app47views47missionarios47_form46html46erb_locals_form_object RAISED compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:70: syntax error, unexpected '<', expecting ')'
+  </p>
+   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: unknown regexp option - p
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: unmatched ): /p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: syntax error, unexpected $undefined
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+                                                                   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n"
+                                 ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: unterminated string meets end of file
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47missionarios47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];form = local_assigns[:form];;@output_buffer = '';  __in_erb_template=true ;  form_for(@missionario) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nome ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :nome ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nascimento ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :nascimento, :start_year => 1900, :end_year =>
+    Time.now.year - 5, :use_month_names => [ 'Janeiro', 'Fevereiro',
+    'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
+    'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,
+    :year ], :default => -17.years.from_now ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :endereco ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :endereco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :bairro ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cidade ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cidade ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :paroquia ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cep ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cep ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado_civil ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.select :estado_civil, [["Solteiro"],["Casado"],["Divorciado"],["Viúvo"]] ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :profissao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :profissao ).to_s); @output_buffer.concat "\n  </p>\n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :sacramentos_recebidos ).to_s); @output_buffer.concat "<br />\n    "
+;  for sacramento in Sacramento.find(:all) ; @output_buffer.concat "\n    <div>\n      "
+
+; @output_buffer.concat(( check_box_tag "missionario[sacramento_ids][]", sacramento.id, 
+	  @missionario.sacramentos.include?(sacramento) ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( sacramento.nome ).to_s); @output_buffer.concat "\n    </div>\n    "
+
+;  end ; @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :movimentos_pastorais ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :movimentos_pastorais ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :função ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( select_tag :func, [["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]
+  </p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75:in `compile!'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/home/lpereira/cresci/comidi/app/views/missionarios/new.html.erb:3:in `_run_erb_app47views47missionarios47new46html46erb'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/lpereira/cresci/comidi/app/controllers/missionarios_controller.rb:29:in `new'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:70: syntax error, unexpected '<', expecting ')'
+  </p>
+   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: unknown regexp option - p
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: unmatched ): /p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:73: syntax error, unexpected $undefined
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+                                                                   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n"
+                                 ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: unterminated string meets end of file
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:75: syntax error, unexpected $end, expecting ')') on line #70 of app/views/missionarios/_form.html.erb:
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func, [["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]
+70:   </p>
+71: 
+72:   <p>
+73:     <%= f.submit "Salvar" %>
+
+    app/views/missionarios/_form.html.erb:75:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (66.1ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.5ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:52:37) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (3.3ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (34.7ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #69 of app/views/missionarios/_form.html.erb:
+66:   </p>
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func, [["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]] %>
+70:   </p>
+71: 
+72:   <p>
+
+    app/views/missionarios/_form.html.erb:69:in `[]'
+    app/views/missionarios/_form.html.erb:69
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/missionarios/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (33.9ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:53:40) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;35;1mEstado Load (2.2ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (32.3ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #69 of app/views/missionarios/_form.html.erb:
+66:   </p>
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func, options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) %>
+70:   </p>
+71: 
+72:   <p>
+
+    app/views/missionarios/_form.html.erb:69:in `[]'
+    app/views/missionarios/_form.html.erb:69
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/missionarios/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (35.7ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 19:54:22) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+ERROR: compiling _run_erb_app47views47missionarios47_form46html46erb_locals_form_object RAISED compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:70: syntax error, unexpected tASSOC, expecting ')'
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: unknown regexp option - p
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: unmatched ): /p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: syntax error, unexpected $undefined
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+                                                                   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n"
+                                 ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: unterminated string meets end of file
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected $end, expecting ')'
+Function body:           def _run_erb_app47views47missionarios47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];form = local_assigns[:form];;@output_buffer = '';  __in_erb_template=true ;  form_for(@missionario) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nome ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :nome ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nascimento ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :nascimento, :start_year => 1900, :end_year =>
+    Time.now.year - 5, :use_month_names => [ 'Janeiro', 'Fevereiro',
+    'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
+    'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,
+    :year ], :default => -17.years.from_now ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :endereco ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :endereco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :bairro ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cidade ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cidade ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :paroquia ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cep ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cep ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado_civil ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.select :estado_civil, [["Solteiro"],["Casado"],["Divorciado"],["Viúvo"]] ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :profissao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :profissao ).to_s); @output_buffer.concat "\n  </p>\n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :sacramentos_recebidos ).to_s); @output_buffer.concat "<br />\n    "
+;  for sacramento in Sacramento.find(:all) ; @output_buffer.concat "\n    <div>\n      "
+
+; @output_buffer.concat(( check_box_tag "missionario[sacramento_ids][]", sacramento.id, 
+	  @missionario.sacramentos.include?(sacramento) ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( sacramento.nome ).to_s); @output_buffer.concat "\n    </div>\n    "
+
+;  end ; @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :movimentos_pastorais ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :movimentos_pastorais ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :função ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( select_tag :func ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) =>
+  </p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76:in `compile!'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/home/lpereira/cresci/comidi/app/views/missionarios/new.html.erb:3:in `_run_erb_app47views47missionarios47new46html46erb'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/lpereira/cresci/comidi/app/controllers/missionarios_controller.rb:29:in `new'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:70: syntax error, unexpected tASSOC, expecting ')'
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: unknown regexp option - p
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: unmatched ): /p>
+
+  <p>
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:74: syntax error, unexpected $undefined
+    <%= f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+                                                                   ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected $undefined, expecting ')'
+;  end ; @output_buffer.concat "\n"
+                                 ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: unterminated string meets end of file
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected $end, expecting ')') on line #70 of app/views/missionarios/_form.html.erb:
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func %>
+70:     <%= options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) =>
+71:   </p>
+72: 
+73:   <p>
+
+    app/views/missionarios/_form.html.erb:76:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (116.1ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:14:33) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.3ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (27.0ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.7ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #70 of app/views/missionarios/_form.html.erb:
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func %>
+70:     <%= options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) %>
+71:   </p>
+72: 
+73:   <p>
+
+    app/views/missionarios/_form.html.erb:70:in `[]'
+    app/views/missionarios/_form.html.erb:70
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/missionarios/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (37.0ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:14:53) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+ERROR: compiling _run_erb_app47views47missionarios47_form46html46erb_locals_form_object RAISED compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n"
+      ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:78: syntax error, unexpected kENSURE, expecting ')'
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:80: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47missionarios47_form46html46erb_locals_form_object(local_assigns)
+            old_output_buffer = output_buffer;object = local_assigns[:object];form = local_assigns[:form];;@output_buffer = '';  __in_erb_template=true ;  form_for(@missionario) do |f| ; @output_buffer.concat "\n  "
+; @output_buffer.concat(( f.error_messages ).to_s); @output_buffer.concat "\n\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nome ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :nome ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :nascimento ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.date_select :nascimento, :start_year => 1900, :end_year =>
+    Time.now.year - 5, :use_month_names => [ 'Janeiro', 'Fevereiro',
+    'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
+    'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,
+    :year ], :default => -17.years.from_now ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :endereco ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :endereco ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :bairro ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cidade ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cidade ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :paroquia ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :cep ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :cep ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :email ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :email ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :estado_civil ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.select :estado_civil, [["Solteiro"],["Casado"],["Divorciado"],["Viúvo"]] ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :profissao ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_field :profissao ).to_s); @output_buffer.concat "\n  </p>\n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.label :sacramentos_recebidos ).to_s); @output_buffer.concat "<br />\n    "
+;  for sacramento in Sacramento.find(:all) ; @output_buffer.concat "\n    <div>\n      "
+
+; @output_buffer.concat(( check_box_tag "missionario[sacramento_ids][]", sacramento.id, 
+	  @missionario.sacramentos.include?(sacramento) ).to_s); @output_buffer.concat "\n      "
+; @output_buffer.concat(( sacramento.nome ).to_s); @output_buffer.concat "\n    </div>\n    "
+
+;  end ; @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :movimentos_pastorais ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( f.text_area :movimentos_pastorais ).to_s); @output_buffer.concat "\n  </p>\n  <p>\n    "
+
+
+; @output_buffer.concat(( f.label :função ).to_s); @output_buffer.concat "<br />\n    "
+; @output_buffer.concat(( select_tag :func ).to_s); @output_buffer.concat "\n    "
+; @output_buffer.concat(( # options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) ).to_s); @output_buffer.concat "\n  </p>\n\n  <p>\n    "
+
+
+
+; @output_buffer.concat(( f.submit "Salvar" ).to_s); @output_buffer.concat "\n  </p>\n"
+
+;  end ; @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: /home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:80:in `compile!'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+/home/lpereira/cresci/comidi/app/views/missionarios/new.html.erb:3:in `_run_erb_app47views47missionarios47new46html46erb'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+/home/lpereira/cresci/comidi/app/controllers/missionarios_controller.rb:29:in `new'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+/home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+/usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+/usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+/usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+/usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+/usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+/usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+/usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+/usr/lib/ruby/1.8/mongrel_rails:282
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+/home/lpereira/cresci/comidi/vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+/home/lpereira/cresci/comidi/vendor/rails/railties/lib/commands/server.rb:49
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+/usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+script/server:3
+
+
+ActionView::TemplateError (compile error
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:76: syntax error, unexpected kEND, expecting ')'
+;  end ; @output_buffer.concat "\n"
+      ^
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:78: syntax error, unexpected kENSURE, expecting ')'
+/home/lpereira/cresci/comidi/app/views/missionarios/_form.html.erb:80: syntax error, unexpected kEND, expecting ')') on line #76 of app/views/missionarios/_form.html.erb:
+73:   <p>
+74:     <%= f.submit "Salvar" %>
+75:   </p>
+76: <% end %>
+
+    app/views/missionarios/_form.html.erb:80:in `compile!'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:66:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `synchronize'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:64:in `compile'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:26:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (32.0ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:15:09) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;35;1mEstado Load (2.4ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (31.7ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #70 of app/views/missionarios/_form.html.erb:
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func %>
+70:     <!-- <%= options_for_select([["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]]) %> -->
+71:   </p>
+72: 
+73:   <p>
+
+    app/views/missionarios/_form.html.erb:70:in `[]'
+    app/views/missionarios/_form.html.erb:70
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/missionarios/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (59.3ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:15:19) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.3ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (30.3ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (1.0ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Rendered missionarios/_form (96.3ms)
+Completed in 114ms (View: 68, DB: 34) | 200 OK [http://lgl.webhop.net/missionarios/new]
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:15:53) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;35;1mEstado Load (2.3ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (26.6ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+
+
+ActionView::TemplateError (can't convert String into Integer) on line #69 of app/views/missionarios/_form.html.erb:
+66:   </p>
+67:   <p>
+68:     <%= f.label :função %><br />
+69:     <%= select_tag :func, options_for_select( [["Coordenador de Diocese","d"]["Coordenador de Forania","f"]["Coordenador de Paróquia","p"]["Missionário","m"]] ) %> 
+70: 
+71:   </p>
+72: 
+
+    app/views/missionarios/_form.html.erb:69:in `[]'
+    app/views/missionarios/_form.html.erb:69
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:313:in `fields_for'
+    vendor/rails/actionpack/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/missionarios/_form.html.erb:1
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:20:in `render'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:26:in `benchmark'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:19:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/renderable_partial.rb:45:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/partials.rb:152:in `render_partial'
+    vendor/rails/actionpack/lib/action_view/base.rb:258:in `render'
+    app/views/missionarios/new.html.erb:3
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:29:in `new'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (36.3ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#new (for 201.82.160.78 at 2009-05-20 20:16:18) [GET]
+Rendering template within layouts/missionarios
+Rendering missionarios/new
+  [4;36;1mEstado Load (2.2ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (25.3ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = NULL ) LIMIT 1[0m
+Rendered missionarios/_form (88.8ms)
+Completed in 118ms (View: 66, DB: 29) | 200 OK [http://lgl.webhop.net/missionarios/new]
+
+
+Processing MissionariosController#create (for 201.82.160.78 at 2009-05-20 20:16:58) [POST]
+  Parameters: {"commit"=>"Salvar", "authenticity_token"=>"7dee520f3cc3953dac7dec2e635877851128ad5c", "missionario"=>{"endereco"=>"teste", "nascimento(3i)"=>"20", "estado_id"=>"29", "cep"=>"21712-100", "nome"=>"Teste", "paroquia_id"=>"116", "sacramento_ids"=>["1", "2"], "bairro"=>"teste", "estado_civil"=>"Solteiro", "cidade"=>"Rio de Janeiro", "movimentos_pastorais"=>"teste", "nascimento(1i)"=>"1992", "profissao"=>"teste", "email"=>"teste@mailinator.com", "nascimento(2i)"=>"5"}, "func"=>"d"}
+  [4;35;1mSacramento Load (0.4ms)[0m   [0mSELECT * FROM "sacramentos" WHERE ("sacramentos"."id" IN (1,2)) [0m
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+  [4;35;1mMissionario Exists (0.2ms)[0m   [0mSELECT "missionarios".id FROM "missionarios" WHERE ("missionarios"."email" = 'teste@mailinator.com') LIMIT 1[0m
+  [4;36;1mMissionario Create (19.7ms)[0m   [0;1mINSERT INTO "missionarios" ("endereco", "created_at", "estado_id", "nome", "cep", "updated_at", "nascimento", "paroquia_id", "bairro", "cidade", "estado_civil", "movimentos_pastorais", "email", "profissao") VALUES('teste', '2009-05-20 23:16:58', 29, 'Teste', '21712-100', '2009-05-20 23:16:58', '1992-05-20', 116, 'teste', 'Rio de Janeiro', 'Solteiro', 'teste', 'teste@mailinator.com', 'teste')[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mINSERT INTO "missionarios_sacramentos" ("created_at", "missionario_id", "sacramento_id", "updated_at") VALUES ('2009-05-19 18:59:24', 4, 1, '2009-05-19 18:59:24')[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mINSERT INTO "missionarios_sacramentos" ("created_at", "missionario_id", "sacramento_id", "updated_at") VALUES ('2009-05-19 19:00:12', 4, 2, '2009-05-19 19:00:12')[0m
+Redirected to #<Missionario:0xb69931c4>
+Completed in 186ms (DB: 21) | 302 Found [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#show (for 201.82.160.78 at 2009-05-20 20:16:58) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mMissionario Load (0.5ms)[0m   [0mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 4) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/show
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 29ms (View: 17, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/4]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 20:17:01) [GET]
+  Parameters: {"id"=>"4"}
+  [4;35;1mMissionario Load (1.6ms)[0m   [0mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 4) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;36;1mEstado Load (2.2ms)[0m   [0;1mSELECT * FROM "estados" [0m
+  [4;35;1mParoquia Load (28.8ms)[0m   [0mSELECT * FROM "paroquias" [0m
+  [4;36;1mSacramento Load (0.5ms)[0m   [0;1mSELECT * FROM "sacramentos" [0m
+  [4;35;1mSacramento Exists (0.3ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+Rendered missionarios/_form (95.9ms)
+Completed in 127ms (View: 106, DB: 2) | 200 OK [http://lgl.webhop.net/missionarios/4/edit]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:54:38) [GET]
+  [4;35;1mMissionario Load (2.2ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;35;1mEstado Load (0.6ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 41ms (View: 22, DB: 3) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#edit (for 201.82.160.78 at 2009-05-20 20:54:41) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMissionario Load (0.6ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 4) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/edit
+  [4;35;1mEstado Load (2.5ms)[0m   [0mSELECT * FROM "estados" [0m
+  [4;36;1mParoquia Load (31.4ms)[0m   [0;1mSELECT * FROM "paroquias" [0m
+  [4;35;1mSacramento Load (0.5ms)[0m   [0mSELECT * FROM "sacramentos" [0m
+  [4;36;1mSacramento Exists (0.3ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 1) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 2) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;36;1mSacramento Exists (0.2ms)[0m   [0;1mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 3) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+  [4;35;1mSacramento Exists (0.2ms)[0m   [0mSELECT "sacramentos".id FROM "sacramentos" INNER JOIN "missionarios_sacramentos" ON "sacramentos".id = "missionarios_sacramentos".sacramento_id WHERE ("sacramentos"."id" = 4) AND ("missionarios_sacramentos".missionario_id = 4 ) LIMIT 1[0m
+Rendered missionarios/_form (104.8ms)
+Completed in 244ms (View: 117, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/4/edit]
+
+
+Processing MissionariosController#show (for 201.82.160.78 at 2009-05-20 20:54:44) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMissionario Load (0.9ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 4) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/show
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 42ms (View: 22, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/4]
+
+
+Processing MissionariosController#show (for 201.82.160.78 at 2009-05-20 20:55:14) [GET]
+  Parameters: {"id"=>"4"}
+  [4;36;1mMissionario Load (0.5ms)[0m   [0;1mSELECT * FROM "missionarios" WHERE ("missionarios"."id" = 4) [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/show
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 30ms (View: 12, DB: 1) | 200 OK [http://lgl.webhop.net/missionarios/4]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:55:16) [GET]
+  [4;36;1mMissionario Load (2.3ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 47ms (View: 30, DB: 3) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:55:17) [GET]
+  [4;35;1mMissionario Load (1.8ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;35;1mEstado Load (0.6ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 44ms (View: 28, DB: 3) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:55:46) [GET]
+  [4;36;1mMissionario Load (1.0ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+
+
+ActionView::TemplateError (undefined method `paroquia' for #<Missionario:0xb6916ea8>) on line #24 of app/views/missionarios/index.html.erb:
+21:     <td><%=h missionario.nascimento %></td>
+22:     <td><%=h missionario.endereco %></td>
+23:     <td><%=h missionario.bairro %></td>
+24:     <td><%=h missionario.paroquia.nome - missionario.paroquia.bairro %></td>
+25:     <td><%=h missionario.cidade %></td>
+26:     <td><%=h missionario.estado.sigla %></td>
+27:     <td><%=h missionario.cep %></td>
+
+    vendor/rails/activerecord/lib/active_record/attribute_methods.rb:260:in `method_missing'
+    app/views/missionarios/index.html.erb:24
+    app/views/missionarios/index.html.erb:18:in `each'
+    app/views/missionarios/index.html.erb:18
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (29.3ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (0.8ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:56:27) [GET]
+  [4;35;1mMissionario Load (1.0ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mParoquia Load (0.4ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 222) [0m
+
+
+ActionView::TemplateError (undefined method `-' for "Nossa Senhora de Copacabana e Santa Rosa de Lima":String) on line #24 of app/views/missionarios/index.html.erb:
+21:     <td><%=h missionario.nascimento %></td>
+22:     <td><%=h missionario.endereco %></td>
+23:     <td><%=h missionario.bairro %></td>
+24:     <td><%=h missionario.paroquia.nome - missionario.paroquia.bairro %></td>
+25:     <td><%=h missionario.cidade %></td>
+26:     <td><%=h missionario.estado.sigla %></td>
+27:     <td><%=h missionario.cep %></td>
+
+    app/views/missionarios/index.html.erb:24
+    app/views/missionarios/index.html.erb:18:in `each'
+    app/views/missionarios/index.html.erb:18
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (150.1ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.0ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:57:03) [GET]
+  [4;35;1mMissionario Load (1.0ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mParoquia Load (0.8ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 222) [0m
+
+
+ActionView::TemplateError (undefined method `-@' for "Copacabana":String) on line #24 of app/views/missionarios/index.html.erb:
+21:     <td><%=h missionario.nascimento %></td>
+22:     <td><%=h missionario.endereco %></td>
+23:     <td><%=h missionario.bairro %></td>
+24:     <td><%=h missionario.paroquia.nome -%> <%= - missionario.paroquia.bairro %></td>
+25:     <td><%=h missionario.cidade %></td>
+26:     <td><%=h missionario.estado.sigla %></td>
+27:     <td><%=h missionario.cep %></td>
+
+    app/views/missionarios/index.html.erb:24
+    app/views/missionarios/index.html.erb:18:in `each'
+    app/views/missionarios/index.html.erb:18
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `send'
+    vendor/rails/actionpack/lib/action_view/renderable.rb:39:in `render'
+    vendor/rails/actionpack/lib/action_view/template.rb:73:in `render_template'
+    vendor/rails/actionpack/lib/action_view/base.rb:256:in `render'
+    vendor/rails/actionpack/lib/action_view/base.rb:367:in `_render_with_layout'
+    vendor/rails/actionpack/lib/action_view/base.rb:254:in `render'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1174:in `render_for_file'
+    vendor/rails/actionpack/lib/action_controller/base.rb:905:in `render_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/activesupport/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:51:in `render'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `send'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:135:in `custom'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `call'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:164:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `each'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:158:in `respond'
+    vendor/rails/actionpack/lib/action_controller/mime_responds.rb:107:in `respond_to'
+    app/controllers/missionarios_controller.rb:7:in `index'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:1253:in `perform_action_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:617:in `call_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    vendor/rails/actionpack/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    vendor/rails/actionpack/lib/action_controller/rescue.rb:136:in `perform_action_without_caching'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    vendor/rails/activerecord/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+    vendor/rails/activerecord/lib/active_record/query_cache.rb:8:in `cache'
+    vendor/rails/actionpack/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `send'
+    vendor/rails/actionpack/lib/action_controller/base.rb:524:in `process_without_filters'
+    vendor/rails/actionpack/lib/action_controller/filters.rb:606:in `process_without_session_management_support'
+    vendor/rails/actionpack/lib/action_controller/session_management.rb:134:in `process'
+    vendor/rails/actionpack/lib/action_controller/base.rb:392:in `process'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:183:in `handle_request'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:110:in `dispatch_unlocked'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:123:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `synchronize'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:122:in `dispatch'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:132:in `dispatch_cgi'
+    vendor/rails/actionpack/lib/action_controller/dispatcher.rb:39:in `dispatch'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/1.8/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/1.8/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `each'
+    /usr/lib/ruby/1.8/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:285:in `run'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `new'
+    /usr/lib/ruby/1.8/mongrel.rb:268:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/1.8/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:129:in `run'
+    /usr/lib/ruby/1.8/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/1.8/mongrel_rails:282
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load_without_new_constant_marking'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:142:in `load'
+    vendor/rails/railties/lib/commands/servers/mongrel.rb:64
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:521:in `new_constants_in'
+    vendor/rails/activesupport/lib/active_support/dependencies.rb:153:in `require'
+    vendor/rails/railties/lib/commands/server.rb:49
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib/ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_trace (54.3ms)
+Rendered /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/_request_and_response (1.1ms)
+Rendering /home/lpereira/cresci/comidi/vendor/rails/actionpack/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:57:09) [GET]
+  [4;35;1mMissionario Load (1.7ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mParoquia Load (0.6ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 222) [0m
+  [4;35;1mEstado Load (0.5ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;36;1mParoquia Load (0.8ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 116) [0m
+  [4;35;1mEstado Load (0.5ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 71ms (View: 53, DB: 4) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:57:22) [GET]
+  [4;36;1mMissionario Load (1.7ms)[0m   [0;1mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;35;1mParoquia Load (0.6ms)[0m   [0mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 222) [0m
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;35;1mParoquia Load (0.4ms)[0m   [0mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 116) [0m
+  [4;36;1mEstado Load (0.3ms)[0m   [0;1mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 140ms (View: 115, DB: 3) | 200 OK [http://lgl.webhop.net/missionarios]
+
+
+Processing MissionariosController#index (for 201.82.160.78 at 2009-05-20 20:57:35) [GET]
+  [4;35;1mMissionario Load (1.0ms)[0m   [0mSELECT * FROM "missionarios" [0m
+Rendering template within layouts/missionarios
+Rendering missionarios/index
+  [4;36;1mParoquia Load (0.4ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 222) [0m
+  [4;35;1mEstado Load (0.4ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 54) [0m
+  [4;36;1mParoquia Load (0.4ms)[0m   [0;1mSELECT * FROM "paroquias" WHERE ("paroquias"."id" = 116) [0m
+  [4;35;1mEstado Load (0.3ms)[0m   [0mSELECT * FROM "estados" WHERE ("estados"."id" = 29) [0m
+Completed in 43ms (View: 32, DB: 2) | 200 OK [http://lgl.webhop.net/missionarios]

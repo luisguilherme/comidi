@@ -3,11 +3,19 @@
 <table>
   <tr>
     <th>Nome</th>
+    <th>Total de missionários</th>
   </tr>
 
 <% for vicariato in @vicariatos %>
   <tr>
     <td><%=h vicariato.nome %></td>
+    <td><%=
+	   count = 0
+	   vicariato.foranias.each do |forania| 
+	     count += forania.missionarios.count
+	   end 
+	   count 
+	   %></td>
     <td><%= link_to 'Show', vicariato %></td>
     <td><%= link_to 'Edit', edit_vicariato_path(vicariato) %></td>
     <td><%= link_to 'Destroy', vicariato, :confirm => 'Are you sure?', :method => :delete %></td>

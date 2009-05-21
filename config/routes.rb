@@ -3,9 +3,9 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :paroquias
 
-  map.resources :foranias
+  map.resources :foranias #, :has_many => :paroquias
 
-  map.resources :vicariatos
+  map.resources :vicariatos #, :has_many => :foranias
 
   # The priority is based upon order of creation: first created -> highest priority.
 

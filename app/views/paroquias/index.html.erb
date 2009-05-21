@@ -6,6 +6,7 @@
     <th>Forania</th>
     <th>Bairro</th>
     <th>Num de comunidades</th>
+    <th>Missionários</th>
   </tr>
 
 <% for paroquia in @paroquias %>
@@ -14,6 +15,7 @@
     <td><%=h paroquia.forania.vicariato.nome + " - " + paroquia.forania.numero.to_s %></td>
     <td><%=h paroquia.bairro %></td>
     <td><%=h paroquia.num_de_comunidades %></td>
+    <td><%=h paroquia.missionarios.count %></td>
     <td><%= link_to 'Show', paroquia %></td>
     <td><%= link_to 'Edit', edit_paroquia_path(paroquia) %></td>
     <td><%= link_to 'Destroy', paroquia, :confirm => 'Are you sure?', :method => :delete %></td>

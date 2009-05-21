@@ -4,6 +4,6 @@ class AddParoquiaToMissionario < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :missionarios, :paroquia
+    remove_column :missionarios, :paroquia_id
   end
 end

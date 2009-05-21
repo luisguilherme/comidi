@@ -1,3 +1,0 @@
-class Forania < ActiveRecord::Base
-  belongs_to :vicariato
-end

@@ -1,8 +1,0 @@
-csvFile = File.new("../states","r")
-csvFile.each_line do |line| 
-  data = line.split(',')
-  sigla = data[0]
-  nome = data[1]
-  state = Estado.new(:nome => nome, :sigla = sigla)  
-end
-

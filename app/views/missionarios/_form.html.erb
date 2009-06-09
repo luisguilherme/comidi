@@ -30,13 +30,38 @@
     <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } %>
   </p>
   <p>
+    <%= f.label :cep %><br />
+    <%= f.text_field :cep %>
+  </p>
+  <p>
     <%= f.label :paroquia %><br />
     <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro %>
   </p>
   <p>
-    <%= f.label :cep %><br />
-    <%= f.text_field :cep %>
+    Telefone residencial<br />
+    <%= f.label :ddd_casa, "DDD" -%>
+    <% defddd = @missionario.ddd_casa; defddd = "21" if @missionario.ddd_casa == nil %>
+    <%= f.text_field :ddd_casa, :value => defddd, :size => 1 -%>
+    <%= f.label :telefone_casa, "Telefone" -%>
+    <%= f.text_field :telefone_casa, :size => 7 -%>
   </p>
+  <p>
+    Telefone comercial<br />
+    <%= f.label :ddd_trabalho, "DDD" -%>
+    <% defddd = @missionario.ddd_trabalho; defddd = "21" if @missionario.ddd_trabalho == nil %>
+    <%= f.text_field :ddd_trabalho, :value => defddd, :size => 1 -%>
+    <%= f.label :telefone_trabalho, "Telefone" -%>
+    <%= f.text_field :telefone_trabalho, :size => 7 -%>
+  </p>
+  <p>
+    Telefone Celular<br />
+    <%= f.label :ddd_celular, "DDD" -%>
+    <% defddd = @missionario.ddd_celular; defddd = "21" if @missionario.ddd_celular == nil %>
+    <%= f.text_field :ddd_celular, :value => defddd, :size => 1 -%>
+    <%= f.label :telefone_celular, "Telefone" -%>
+    <%= f.text_field :telefone_celular, :size => 7 -%>
+  </p>
+
   <p>
     <%= f.label :email %><br />
     <%= f.text_field :email %>

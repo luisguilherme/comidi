@@ -35,12 +35,12 @@
     <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } %>
   </p>
   <p>
-    <%= f.label :cep, "CEP" %><br />
-    <%= f.text_field :cep %>
+    <%= f.label :cep, "CEP (só números)" %><br />
+    <%= f.text_field :cep, :size => 6 %>
   </p>
   <p>
-    <%= f.label :paroquia, "Paróquia"  %><br />
-    <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro %>
+    <%= f.label :paroquia, "Paróquia"  %><br /> 
+    <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.bairro + " " + k.nome }, :id, :nome_e_bairro %>
   </p>
   <p>
     Telefone residencial<br />
@@ -70,10 +70,6 @@
   <p>
     <%= f.label :email %><br />
     <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :estado_civil %><br />
-    <%= f.select :estado_civil, [["Solteiro"],["Casado"],["Viúvo"]] %>
   </p>
   <p>
     <%= f.label :profissao %><br />

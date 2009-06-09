@@ -3,6 +3,6 @@ class Paroquia < ActiveRecord::Base
   has_many :missionarios
 
   def nome_e_bairro
-    "#{nome} - #{bairro}"
+    "#{bairro} - #{nome}"
   end
 end

@@ -3,19 +3,23 @@
 
   <p>
     <%= f.label :nome %><br />
-    <%= f.text_field :nome %>
+    <%= f.text_field :nome, :size => 65 %>
+  </p>
+  <p>
+    <%= f.label :nome_cracha, "Como você gostaria de ser chamado? (nome no crachá)" %><br />
+    <%= f.text_field :nome_cracha, :size => 65 %>
   </p>
   <p>
     <%= f.label :nascimento %><br />
     <%= f.date_select :nascimento, :start_year => 1900, :end_year =>
-    Time.now.year - 5, :use_month_names => [ 'Janeiro', 'Fevereiro',
+    Time.now.year, :use_month_names => [ 'Janeiro', 'Fevereiro',
     'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
     'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,
-    :year ], :default => -17.years.from_now %>
+    :year ],  :include_blank => true  %>
   </p>
   <p>
     <%= f.label :endereco %><br />
-    <%= f.text_field :endereco %>
+    <%= f.text_field :endereco, :size => 65 %>
   </p>
   <p>
     <%= f.label :bairro %><br />
@@ -23,18 +27,19 @@
   </p>
   <p>
     <%= f.label :cidade %><br />
-    <%= f.text_field :cidade %>
+    <% defcid = @missionario.cidade; defcid = "Rio de Janeiro" if defcid == nil %> 
+    <%= f.text_field :cidade, :value => defcid %>
   </p>
   <p>
     <%= f.label :estado %><br />
     <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } %>
   </p>
   <p>
-    <%= f.label :cep %><br />
+    <%= f.label :cep, "CEP" %><br />
     <%= f.text_field :cep %>
   </p>
   <p>
-    <%= f.label :paroquia %><br />
+    <%= f.label :paroquia, "Paróquia"  %><br />
     <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.nome + " " + k.bairro }, :id, :nome_e_bairro %>
   </p>
   <p>

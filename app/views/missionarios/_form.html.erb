@@ -87,13 +87,16 @@
     <% end %>
   </p>
   <p>
-    <%= f.label :movimentos_pastorais %><br />
+    <%= f.label :movimentos_pastorais, "Movimentos ou pastorais de que participa (liste todos)" %><br />
     <%= f.text_area :movimentos_pastorais %>
   </p>
   <p>
-    <%= f.label :função %><br />
-    <%= select_tag :func, options_for_select( [["Coordenador de Diocese","d"],["Coordenador de Forania","f"],["Coordenador de Paróquia","p"],["Missionário","m"]] ) %> 
-
+    <%= f.label :func, "Função no Conselho Missionário" %><br />
+    <%= select_tag :func, options_for_select( [["Missionário","m"],["Coordenador de Diocese","d"],["Coordenador de Vicariato","v"],["Coordenador de Forania","f"],["Coordenador de Paróquia","p"],["Assessor Eclesial","a"]] ) %> 
+  </p>
+  <p>
+    <%= f.label :atividades, "O que você está disposto a fazer como trabalho missionário?" %><br />
+    <%= f.text_area :atividades %>
   </p>
 
   <p>

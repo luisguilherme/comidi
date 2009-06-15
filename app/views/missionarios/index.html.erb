@@ -2,33 +2,24 @@
 
 <table>
   <tr>
-    <th>Nome</th>
-    <th>Nascimento</th>
-    <th>Endereco</th>
-    <th>Bairro</th>
-    <th>Paróquia</th>
-    <th>Cidade</th>
-    <th>Estado</th>
-    <th>Cep</th>
+    <th><%= link_to "Nome no Crachá", :controller => "Missionarios", :sort => "nome_cracha" -%></th>
+    <th><%= link_to "Idade", :controller => "Missionarios", :sort => "nascimento" -%></th>
+    <th><%= link_to "Paróquia", :controller => "Missionarios", :sort => "paroquia" -%></th>
+    <th>Telefone</th>
+    <th>Celular</th>
     <th>Email</th>
-    <th>Profissao</th>
-    <th>Movimentos pastorais</th>
   </tr>
-
-<% for missionario in @missionarios %>
+<% sort = params[:sort] %>
+<% sort = 'nome_cracha' if sort == nil %>
+<% for missionario in @missionarios.sort_by { |a| a.send(sort).to_s } %>
   <tr>
-    <td><%=h missionario.nome %></td>
-    <td><%=h missionario.nascimento %></td>
-    <td><%=h missionario.endereco %></td>
-    <td><%=h missionario.bairro %></td>
-    <td><%=h missionario.paroquia.nome -%> - <%= missionario.paroquia.bairro %></td>
-    <td><%=h missionario.cidade %></td>
-    <td><%=h missionario.estado.sigla %></td>
-    <td><%=h missionario.cep %></td>
+    <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
+    <td><%=h (Date.today - missionario.nascimento).to_i/365 %></td>
+    <td><%=h missionario.paroquia.nome -%> - <%=h missionario.paroquia.bairro %></td
+>    <td>(<%=h missionario.ddd_casa -%>) <%=h missionario.telefone_casa %></td>
+    <td>(<%=h missionario.ddd_celular -%>) <%=h missionario.telefone_celular %></td>
+
     <td><%=h missionario.email %></td>
-    <td><%=h missionario.profissao %></td>
-    <td><%=h missionario.movimentos_pastorais %></td>
-    <td><%= link_to 'Show', missionario %></td>
     <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
     <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
@@ -36,5 +27,7 @@
 </table>
 
 <br />
+
+<p><%=h params[:sorting] -%></p>
 
 <%= link_to 'New missionario', new_missionario_path %>

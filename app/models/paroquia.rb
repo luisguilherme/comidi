@@ -5,4 +5,7 @@ class Paroquia < ActiveRecord::Base
   def nome_e_bairro
     "#{bairro} - #{nome}"
   end
+  def to_s
+    nome_e_bairro
+  end
 end

@@ -11,7 +11,7 @@
   </p>
   <p>
     <%= f.label :nascimento %><br />
-    <%= f.date_select :nascimento, :start_year => 1900, :end_year =>
+    <%= f.date_select :nascimento, :end_year => 1900, :start_year =>
     Time.now.year, :use_month_names => [ 'Janeiro', 'Fevereiro',
     'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro',
     'Outubro', 'Novembro', 'Dezembro' ], :order => [ :day, :month,

@@ -1,5 +1,7 @@
 class Vicariato < ActiveRecord::Base
   has_many :foranias
+  has_many :coordenacaos
+  has_many :coordenadores, :through => :coordenacaos, :source => :missionario
 
   def count_missionarios 
     @foranias = this.foranias

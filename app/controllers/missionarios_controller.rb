@@ -44,7 +44,7 @@ class MissionariosController < ApplicationController
     
     respond_to do |format|
       if @missionario.save
-        coordenacao(params[:func].to_i)
+        coordenacao(params[:missionario][:nivel].to_i)
         flash[:notice] = "Missionario was successfully created. #{@message}"
         format.html { redirect_to(@missionario) }
         format.xml  { render :xml => @missionario, :status => :created, :location => @missionario }
@@ -64,7 +64,7 @@ class MissionariosController < ApplicationController
 
     respond_to do |format|
       if @missionario.update_attributes(params[:missionario])
-        coordenacao(params[:func].to_i)
+        coordenacao(params[:missionario][:nivel].to_i)
         flash[:notice] = 'Missionario was successfully updated.'
         format.html { redirect_to(@missionario) }
         format.xml  { head :ok }

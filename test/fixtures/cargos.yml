@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nome: MyString
+  nivel: 1
+  adjunto: false
+
+two:
+  nome: MyString
+  nivel: 1
+  adjunto: false

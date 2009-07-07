@@ -44,7 +44,7 @@ class MissionariosController < ApplicationController
     
     respond_to do |format|
       if @missionario.save
-        coordenacao(params[:missionario][:nivel].to_i)
+        coordenacao(params[:missionario][:cargo_id])
         flash[:notice] = "Missionario was successfully created. #{@message}"
         format.html { redirect_to(@missionario) }
         format.xml  { render :xml => @missionario, :status => :created, :location => @missionario }
@@ -64,7 +64,7 @@ class MissionariosController < ApplicationController
 
     respond_to do |format|
       if @missionario.update_attributes(params[:missionario])
-        coordenacao(params[:missionario][:nivel].to_i)
+        coordenacao(params[:missionario][:cargo_id])
         flash[:notice] = 'Missionario was successfully updated.'
         format.html { redirect_to(@missionario) }
         format.xml  { head :ok }
@@ -88,22 +88,24 @@ class MissionariosController < ApplicationController
   end
 
   def coordenacao(id) 
-    unless id >= 4 then
+    cargo = Cargo.find(id)
+    nivel = cargo.nivel
+    unless nivel >= 5 then
       @coordenacao = Coordenacao.find(:all, :conditions => { :missionario_id => @missionario.id }).first
       isnew = false
       if @coordenacao == nil then
         @coordenacao = Coordenacao.new 
         isnew = true
       end
-      @coordenacao.nivel = id
+      @coordenacao.nivel = nivel
       @coordenacao.missionario = @missionario
-      if id == 3 then 
+      if nivel == 3 then 
         @coordenacao.paroquia = @missionario.paroquia
-      elsif id == 2 then
+      elsif nivel == 2 then
         @coordenacao.forania = @missionario.paroquia.forania
-      elsif id == 1 then
+      elsif nivel == 1 then
         @coordenacao.vicariato = @missionario.paroquia.forania.vicariato
-      elsif id == 0 then
+      elsif nivel == 0 then
       end
       @coordenacao.save
     end

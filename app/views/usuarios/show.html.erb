@@ -1,0 +1,23 @@
+<p>
+  <b>Login:</b>
+  <%=h @usuario.login %>
+</p>
+
+<p>
+  <b>Hash senha:</b>
+  <%=h @usuario.hash_senha %>
+</p>
+
+<p>
+  <b>Salt:</b>
+  <%=h @usuario.salt %>
+</p>
+
+<p>
+  <b>Missionario:</b>
+  <%=h @usuario.missionario %>
+</p>
+
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

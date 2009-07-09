@@ -1,4 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :usuarios
+
   map.resources :missionarios
 
   map.resources :paroquias

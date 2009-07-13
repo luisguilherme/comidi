@@ -7,6 +7,7 @@
 <%= link_to 'Foranias', foranias_path -%><br />
 <%= link_to 'Vicariatos', vicariatos_path -%><br />
 <%= link_to 'Paróquias', paroquias_path -%><br />
+<%= link_to 'Usuários', usuarios_path -%><br />
 
 <h2>Coordenadores diocesanos</h2>
 <table>
@@ -21,7 +22,7 @@
     <th>Celular</th>
     <th>Email</th>
   </tr>
-<% for missionario in @coordenadores %>
+<% for missionario in  %>
   <tr>
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>

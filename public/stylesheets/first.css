@@ -1,0 +1,37 @@
+body { 
+    background-color: #33c; 
+    color: #fff; 
+}
+
+body, p, ol, ul, td {
+  font-family: Nina, verdana, "Luxi Sans", Tahoma, "Bitstream Vera Sans", Helvetica, "Nimbus Sans", arial, sans-serif;
+  font-size:   12px;
+  line-height: 17px;
+}
+
+#container {
+    width: 670px;
+    margin: 1px auto;
+}
+
+#header {
+    height: 173px;
+    padding-left: 150px;
+    background: transparent url("/images/brasao.gif") no-repeat top left; 
+    background-color: #ccf;
+    color: black;
+}
+#menu {
+    float: right;
+    width: 200px;
+    background-color: #6cf;
+}
+
+#info {
+    color: black;
+    width: 390px;
+    margin-right: 240px;
+    padding: 20px;
+    background: url("/images/missionarios-rc-fundo.jpg") no-repeat bottom center;
+    background-color: #6cf;
+}

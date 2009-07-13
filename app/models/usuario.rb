@@ -13,9 +13,9 @@ class Usuario < ActiveRecord::Base
 
   
   def self.autentica(login, password)
-    usuario = self.find_by_nome(login)
+    usuario = self.find_by_login(login)
     if usuario
-      expected_password = encrypted_password(password, user.salt)
+      expected_password = encrypted_password(password, usuario.salt)
       if usuario.hash_senha != expected_password 
         usuario = nil
       end

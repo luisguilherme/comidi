@@ -1,4 +1,9 @@
+# -*- coding: undecided -*-
 class MissionariosController < ApplicationController
+
+  # Isso funciona, mas é melhor fazer o cara criar um login primeiro
+  #before_filter :authorize, :except => :new
+
   # GET /missionarios
   # GET /missionarios.xml
   def index

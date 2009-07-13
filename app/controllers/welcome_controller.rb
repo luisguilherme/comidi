@@ -8,4 +8,6 @@ class WelcomeController < ApplicationController
       @coordenadores << line.missionario
     end
   end
+  def authorize
+  end
 end

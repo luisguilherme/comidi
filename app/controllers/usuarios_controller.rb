@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class UsuariosController < ApplicationController
   # GET /usuarios
   # GET /usuarios.xml
@@ -24,7 +25,7 @@ class UsuariosController < ApplicationController
   # GET /usuarios/new
   # GET /usuarios/new.xml
   def new
-    @usuario = Usuario.new
+    @usuario = Usuario.new(:nivel => 2)
 
     respond_to do |format|
       format.html # new.html.erb
@@ -41,7 +42,7 @@ class UsuariosController < ApplicationController
   # POST /usuarios.xml
   def create
     @usuario = Usuario.new(params[:usuario])
-
+    
     respond_to do |format|
       if @usuario.save
         flash[:notice] = 'Usuario #{@usuario.login} was successfully created.'
@@ -80,6 +81,20 @@ class UsuariosController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(usuarios_url) }
       format.xml  { head :ok }
+    end
+  end
+
+  def authorize
+    #Este é mais sensível
+    user = Usuario.find_by_id(session[:usuario_id])
+    if user and user.nivel > 1
+      flash[:notice] = "Acesso proibido"
+      redirect_to :controller => :welcome
+      return
+    end
+    unless user and user.nivel <= 1
+      flash[:notice] = "Faça login"
+      redirect_to :controller => :admin, :action => :login
     end
   end
 end

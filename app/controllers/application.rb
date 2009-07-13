@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
 class ApplicationController < ActionController::Base
+  before_filter :authorize, :except => [:login, :logout] 
+
   helper :all # include all helpers, all the time
 
   session :session_key => '_comidi_session_id'
@@ -14,4 +17,20 @@ class ApplicationController < ActionController::Base
   # Uncomment this to filter the contents of submitted sensitive data parameters
   # from your application log (in this case, all fields with names like "password"). 
   # filter_parameter_logging :password
+
+  protected
+  def authorize
+    user = Usuario.find_by_id(session[:usuario_id])
+    if user and user.nivel > 1
+      flash[:notice] = "Acesso proibido para o seu usuário"
+      redirect_to :controller => :welcome
+      return
+    end
+    unless user and user.nivel <= 1
+      flash[:notice] = "Faça login"
+      redirect_to :controller => :admin, :action => :login
+    end
+
+  end
+  
 end

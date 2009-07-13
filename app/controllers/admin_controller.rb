@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class AdminController < ApplicationController
   def login
     session[:usuario_id] = nil
@@ -13,9 +14,15 @@ class AdminController < ApplicationController
   end
 
   def logout
+    session[:usuario_id] = nil
+    redirect_to :controller => 'welcome'
   end
 
   def index
+    @num_missionarios = Missionario.count
+    threshold = 4
+    cargos = Cargo.find(:all, :conditions => { :nivel => 0..threshold })
+    @coordenadores = Missionario.find(:all, :conditions => { :cargo_id => cargos })
   end
 
 end

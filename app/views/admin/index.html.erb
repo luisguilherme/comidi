@@ -22,7 +22,7 @@
     <th>Celular</th>
     <th>Email</th>
   </tr>
-<% for missionario in  %>
+<% for missionario in @coordenadores %>
   <tr>
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>

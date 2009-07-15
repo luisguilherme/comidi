@@ -36,10 +36,36 @@
 <div id="info">
   <h2>O COMIDI</h2>
   <p>
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in tellus est, sit amet condimentum odio. Vestibulum pharetra pellentesque arcu at vulputate. Duis ultricies massa leo. Cras et augue sed ipsum condimentum tristique suscipit eu arcu. Mauris est nibh, volutpat ut consectetur a, auctor ac risus. Suspendisse potenti. Morbi ut quam eget ipsum congue aliquam non vel nulla. Curabitur suscipit vehicula eleifend. Donec tincidunt nibh ut tortor condimentum quis fringilla massa lacinia. Duis sagittis, massa ac porttitor adipiscing, lacus tellus fermentum purus, in accumsan lorem orci in tortor. Maecenas eu mauris diam. Maecenas sem nisi, luctus bibendum faucibus rutrum, cursus vitae risus. Maecenas consectetur dui at turpis iaculis in posuere purus porttitor. Pellentesque vestibulum imperdiet tortor, ut condimentum purus tincidunt eget. Duis sollicitudin bibendum urna, ac semper nisi placerat et. Praesent accumsan, leo eu semper varius, odio sem laoreet ipsum, quis varius nibh massa et felis. Proin metus ligula, iaculis ac consequat ut, porttitor vel ante. Etiam nec imperdiet tellus. Proin imperdiet purus in nisi aliquet ullamcorper. Nulla auctor imperdiet tortor vel molestie.
-</p>
+O Conselho Missionário é um organismo que existe na Igreja Católica Apostólica Romana, em diferentes âmbitos: Paroquial (COMIPA), Diocese (COMIDI), Regional da CNBB (COMIRE) e Nacional (COMINA).</p>
+
+É formado por um grupo de pessoas que tem o compromisso de ajudar a Igreja local a viver a dimensão missionária do seu batismo.
+
+É ao mesmo tempo “espaço e instrumento” privilegiado do compromisso missionária da Igreja diocesana. Como instrumento, ajuda a Igreja a viver a sua vocação missionária. Como espaço é chamado a experimentar em si mesmo essa realidade e depois testemunhá-la.
+
+Nossa Missão é:
+<ol>
+<li>Articula a dimensão missionária na Diocese e nas Paróquias.</li>
+<li>Mantém sempre viva a chama da missionariedade que, desde o Batismo foi infundida no coração de cada batizado.</li>
+<li>Fazer com que a dimensão missionária perpasse todas as pastorais, movimentos e grupos existentes na diocese. A dimensão missionária não é uma pastoral a mais. Sua transversalidade dá novo vigor, novo impulso.</li>
+<li>Enriquece a vivência cristã com a espiritualidade missionária que motiva a fraternidade universal, o respeito às culturas, o diálogo ecumênico e inter-religioso, o amor à ecologia; que desperta a dimensão profética da missão.</li>
+<li>Estabelece prioridades e linhas de ação que deverão nortear a animação missionária na Diocese.</li>
+<li>Conscientizar todos os Vicariatos, Paróquias e Movimentos em conhecer e apoiar (dentro do possível) todos os projetos missionários existentes:
+<ul>
+<li>Igrejas Irmãs (Parintins/AM e Paranatinga/MT)</li>
+<li>Os projetos missionários “Além Fronteiras”</li>
+<li>O projeto “Missão Continental” em nossa Diocese</li>
+<li>As diversas iniciativas missionárias dos Movimentos e Ordens Religiosas em nossa Diocese</li>
+<li>Missão popular</li>
+</ul></li>
+</ol>
+
+<h2>Coordenador do Comidi</h2>
 <p>
-Vestibulum bibendum, lorem eget consequat dapibus, nulla ante gravida nibh, ut blandit massa dui nec turpis. Morbi laoreet mauris nec dui viverra malesuada. In hac habitasse platea dictumst. Fusce sem mi, aliquet nec gravida id, tincidunt at est. Fusce vel bibendum lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut in placerat purus. In hac habitasse platea dictumst. Aliquam erat volutpat. Maecenas a ligula vel augue pretium scelerisque. Integer tellus velit, semper quis aliquam molestie, accumsan nec enim. Maecenas ac nibh at tortor dictum ullamcorper.
+<%= h @coordenador.missionario.nome_cracha -%><br />
+(<%=h @coordenador.missionario.ddd_casa -%>)<%=h @coordenador.missionario.telefone_casa %><br />
+(<%=h @coordenador.missionario.ddd_celular -%>)<%=h @coordenador.missionario.telefone_celular %><br />
+<a href="mailto:<%= h @coordenador.missionario.email -%>"><%= h @coordenador.missionario.email -%> </a>
 </p>
+
 </div>
 </div>

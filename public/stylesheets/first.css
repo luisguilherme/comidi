@@ -14,6 +14,10 @@ body, p, ol, ul, td {
     margin: 1px auto;
 }
 
+h1 {
+    line-height: 50px;
+}
+
 #header {
     height: 173px;
     padding-left: 150px;

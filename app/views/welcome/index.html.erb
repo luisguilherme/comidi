@@ -11,6 +11,7 @@
   <h2>Bla</h2>
   Bem vindo(a), <%= Usuario.find(session[:usuario_id]).login -%>
   <br />
+  <%= link_to 'Administrar', :controller => :admin %><br />
   <%= link_to 'Sair', :controller => :admin, :action => :logout %>
   <% else %>
   <h2>Sou usuário!</h2>

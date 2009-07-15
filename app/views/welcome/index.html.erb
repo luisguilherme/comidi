@@ -8,13 +8,13 @@
 
 <div id="menu">
   <% if session[:usuario_id] %>
-  <h2>Bla</h2>
+  <h2>Painel</h2>
   Bem vindo(a), <%= Usuario.find(session[:usuario_id]).login -%>
   <br />
   <%= link_to 'Administrar', :controller => :admin %><br />
   <%= link_to 'Sair', :controller => :admin, :action => :logout %>
   <% else %>
-  <h2>Sou usuário!</h2>
+  <h2>Sou missionário!</h2>
   <% form_tag('/admin/login') do %>
   
   <table>
@@ -41,7 +41,7 @@ O Conselho Missionário é um organismo que existe na Igreja Católica Apostóli
 
 É formado por um grupo de pessoas que tem o compromisso de ajudar a Igreja local a viver a dimensão missionária do seu batismo.
 
-É ao mesmo tempo “espaço e instrumento” privilegiado do compromisso missionária da Igreja diocesana. Como instrumento, ajuda a Igreja a viver a sua vocação missionária. Como espaço é chamado a experimentar em si mesmo essa realidade e depois testemunhá-la.
+É ao mesmo tempo “espaço e instrumento” privilegiado do compromisso missionário da Igreja diocesana. Como instrumento, ajuda a Igreja a viver a sua vocação missionária. Como espaço é chamado a experimentar em si mesmo essa realidade e depois testemunhá-la.
 
 Nossa Missão é:
 <ol>

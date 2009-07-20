@@ -1,0 +1,24 @@
+SEGURANÇA:
+
+- Segurança dos campos (não permitir injection, fazer verificação se o
+  cara não puder editar algum campo). Casos em que isso ocorre:
+  . Criação de missionário (o cara pode criar-se como coordenador)
+  . Criação de usuário (um administrador pode criar qualquer nível de
+    usuário) 
+- HTTP e não HTTPS
+
+FUNCIONALIDADES:
+- Agenda de eventos
+- Esquemas para mandar email
+  . Quem pode mandar?
+  . Quais são as listas padrão?
+- Busca (vários tipos)
+- Como fazer a união de cargo com coordenação?
+- Missionário cadastrar a si mesmo (criar usuário)
+
+
+INTERFACE:
+- Strings em inglês.
+- Entrada de telefone unificada (com ou sem traço?)
+- View de missionário tem que mostrar tudo
+- Identidade Visual

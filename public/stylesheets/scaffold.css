@@ -55,3 +55,7 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+.cep {
+    font-size: 16px;
+    line-weight: 23px;
+}

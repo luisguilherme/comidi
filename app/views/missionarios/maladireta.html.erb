@@ -5,9 +5,11 @@
 <p class="maladireta">
 <%= m.nome -%><br />
 <%= m.endereco -%><br />
-<%= m.bairro -%> -- <%= m.cidade -%>-<%= m.estado.sigla -%><br />
-<%= m.cep %><br />
+<%= m.bairro -%><br />
+<%= m.cidade -%> - <%= m.estado.sigla -%><br />
+<span class='cep'><%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] %></span><br />
 <hr />
 <% end %>
+
 
  

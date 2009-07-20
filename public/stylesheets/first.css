@@ -39,3 +39,6 @@ h1 {
     background: url("/images/missionarios-rc-fundo.jpg") no-repeat bottom center;
     background-color: #6cf;
 }
+.vermelho {
+    color: #f00;
+}

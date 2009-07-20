@@ -11,7 +11,6 @@ class Usuario < ActiveRecord::Base
 
   validate :senha_nao_nula
 
-  
   def self.autentica(login, password)
     usuario = self.find_by_login(login)
     if usuario
@@ -35,8 +34,12 @@ class Usuario < ActiveRecord::Base
     self.hash_senha = Usuario.encrypted_password(self.password, self.salt)
   end
   
+  def editable_by(user)
+    user == self || user.nivel < self.nivel
+  end
+
 private
-  
+
   def senha_nao_nula
     errors.add_to_base("Falta senha") if hash_senha.blank?
   end

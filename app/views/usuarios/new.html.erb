@@ -1,35 +1,5 @@
 <h1>New usuario</h1>
 
-<% form_for(@usuario) do |f| %>
-  <%= f.error_messages %>
-
-  <p>
-    <%= f.label :login %><br />
-    <%= f.text_field :login %>
-  </p>
-  <p>
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
-  </p>
-  <p>
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
-  </p>
-  <p>
-    <%= f.label :missionario %>
-    <%= f.collection_select :missionario_id, Missionario.find(:all), :id, :nome_cracha, { :include_blank => true } %>
-  </p>
-  <% if Usuario.find(session[:usuario_id]).nivel == 0 %>
-<p>
-  <%= f.label :nivel %>
-  <%= f.select :nivel, [["Usuário",2],["Administrador",1]] %>
-</p>
-<% else %>
-<%= hidden_field :usuario, :nivel %>
-<% end %>
-  <p>
-    <%= f.submit "Create" %>
-  </p>
-<% end %>
+<%= render :partial => 'form' %>
 
 <%= link_to 'Back', usuarios_path %>

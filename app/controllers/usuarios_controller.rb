@@ -36,6 +36,10 @@ class UsuariosController < ApplicationController
   # GET /usuarios/1/edit
   def edit
     @usuario = Usuario.find(params[:id])
+    unless (@usuario.editable_by(Usuario.find(session[:usuario_id]))) 
+      flash[:notice] = 'Acesso negado'
+      redirect_to(:action => :index)
+    end
   end
 
   # POST /usuarios

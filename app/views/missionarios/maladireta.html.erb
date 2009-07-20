@@ -1,0 +1,13 @@
+<h1>Lista de missionários para Mala Direta</h1>
+
+<hline />
+<% @missionarios.each do |m| %>
+<p class="maladireta">
+<%= m.nome -%><br />
+<%= m.endereco -%><br />
+<%= m.bairro -%> <%= m.cidade -%> - <%= m.estado.sigla -%><br />
+<%= m.cep %><br />
+<hline />
+<% end %>
+
+ 

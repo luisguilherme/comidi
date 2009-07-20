@@ -1,4 +1,4 @@
-# -*- coding: undecided -*-
+# -*- coding: utf-8 -*-
 class MissionariosController < ApplicationController
 
   # Isso funciona, mas é melhor fazer o cara criar um login primeiro
@@ -7,6 +7,15 @@ class MissionariosController < ApplicationController
   # GET /missionarios
   # GET /missionarios.xml
   def index
+    @missionarios = Missionario.find(:all)
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.xml  { render :xml => @missionarios }
+    end
+  end
+
+  def maladireta
     @missionarios = Missionario.find(:all)
 
     respond_to do |format|

@@ -1,6 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :usuarios
 
+  map.connect 'missionarios/maladireta', :controller => 'missionarios', :action => 'maladireta'
   map.resources :missionarios
 
   map.resources :paroquias

@@ -1,4 +1,9 @@
-<h1>Listing missionarios</h1>
+<h1>Missionários</h1>
+
+<%= link_to 'Cadastrar missionario', new_missionario_path %>
+<%= link_to 'Listar endereços', :action => :maladireta %>
+<%= link_to 'Tela principal', :controller => :admin %>
+
 
 <table>
   <tr>
@@ -29,6 +34,3 @@
 <br />
 
 <p><%=h params[:sorting] -%></p>
-
-<%= link_to 'Cadastrar missionario', new_missionario_path %>
-<%= link_to 'Tela principal', :controller => :admin %>

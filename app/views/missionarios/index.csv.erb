@@ -1,4 +1,4 @@
 Nome; Nome crachá; Endereço; Bairro; Cidade; Estado; CEP;
 <% @missionarios.each do |m| %>
-<%= m.nome -%>;<%= m.nome_cracha -%>;<%= m.endereco.tr(';';' ') -%>;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= "%05d-%03d" % [ m.cep.to_i / 1000; m.cep.to_i % 1000 ] -%>
+<%= m.nome -%>;<%= m.nome_cracha -%>;<%= m.endereco.tr(';',' ') -%>;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] -%>
 <% end %>

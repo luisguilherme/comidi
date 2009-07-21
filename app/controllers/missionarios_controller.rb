@@ -12,6 +12,7 @@ class MissionariosController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @missionarios }
+      format.csv { render :csv => @missionarios }
     end
   end
 

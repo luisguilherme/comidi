@@ -21,14 +21,14 @@ class ApplicationController < ActionController::Base
   protected
   def authorize
     user = Usuario.find_by_id(session[:usuario_id])
-    uri = request.request_uri
     if user and user.nivel > 1
       flash[:notice] = "Acesso proibido para o seu usuário"
+      uri = request.referrer
       redirect_to (uri || {:controller => :welcome})
       return
     end
     unless user and user.nivel <= 1
-      session[:original_uri] = uri
+      session[:original_uri] = request.request_uri
       flash[:notice] = "Faça login"
       redirect_to :controller => :admin, :action => :login
     end

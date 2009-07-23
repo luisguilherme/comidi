@@ -6,7 +6,8 @@ class AdminController < ApplicationController
       usuario = Usuario.autentica(params[:login],params[:password])
       if usuario 
         session[:usuario_id] = usuario.id
-        redirect_to(:action => "index")
+        uri = session[:original_uri]
+        redirect_to(uri || {:action => "index"})
       else
         flash.now[:notice] = "Usuário ou senha inválidos"
       end

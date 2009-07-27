@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 class MissionariosController < ApplicationController
-
+  
   # Isso funciona, mas é melhor fazer o cara criar um login primeiro
   #before_filter :authorize, :except => :new
 
   # GET /missionarios
   # GET /missionarios.xml
   def index
-    @missionarios = Missionario.find(:all)
+    ordering
+    @missionarios = Missionario.find(:all, :include => :paroquia, :order => @ordering)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -17,8 +18,8 @@ class MissionariosController < ApplicationController
   end
 
   def maladireta
-    @missionarios = Missionario.find(:all)
-
+    @missionarios = Missionario.find(:all, :order => "cep")
+    
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @missionarios }
@@ -125,5 +126,22 @@ class MissionariosController < ApplicationController
       @coordenacao.save
     end
   end
-    
+  def ordering
+    ordering = session[:miss_order] || ["nome_cracha"]
+    if params[:sort]
+      if ordering[0].split[0] == params[:sort]
+        if ordering[0][" DESC"]
+          ordering[0][" DESC"] = ""
+        else
+          ordering[0] += " DESC"
+        end
+      else
+        ordering.unshift(params[:sort]).uniq!
+      end
+    end
+    session[:miss_order] = ordering.uniq
+    @ordering = ""
+    session[:miss_order].each { |f| @ordering += f + ", " }
+    @ordering = @ordering[0..-3]
+  end
 end

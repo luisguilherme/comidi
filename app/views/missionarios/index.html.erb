@@ -9,14 +9,14 @@
   <tr>
     <th><%= link_to "Nome no Crachá", :controller => "Missionarios", :sort => "nome_cracha" -%></th>
     <th><%= link_to "Idade", :controller => "Missionarios", :sort => "nascimento" -%></th>
-    <th><%= link_to "Paróquia", :controller => "Missionarios", :sort => "paroquia" -%></th>
+    <th><%= link_to "Paróquia", :controller => "Missionarios", :sort => "paroquias.nome" -%></th>
     <th>Telefone</th>
     <th>Celular</th>
-    <th>Email</th>
+    <th><%= link_to "Email", :controller => "Missionarios", :sort => "email" -%></th>
   </tr>
 <% sort = params[:sort] %>
 <% sort = 'nome_cracha' if sort == nil %>
-<% for missionario in @missionarios.sort_by { |a| a.send(sort).to_s } %>
+<% for missionario in @missionarios %>
   <tr>
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>

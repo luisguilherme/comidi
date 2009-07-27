@@ -14,6 +14,7 @@ class ForaniasController < ApplicationController
   # GET /foranias/1.xml
   def show
     @forania = Forania.find(params[:id])
+    @coordenadores = @forania.coordenadores
 
     respond_to do |format|
       format.html # show.html.erb

@@ -9,5 +9,30 @@
 </p>
 
 
+<h2>Coordenadores de forania</h2>
+<table>
+  <tr>
+    <th>Nome no Crachá</th>
+    <th>Idade</th>
+    <th>Telefone</th>
+    <th>Celular</th>
+    <th>Email</th>
+  </tr>
+<% for missionario in @coordenadores %>
+  <tr>
+    <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
+    <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>
+    <td>(<%=h missionario.ddd_casa -%>)<%=h missionario.telefone_casa %></td>
+    <td>(<%=h missionario.ddd_celular -%>)<%=h missionario.telefone_celular %></td>
+
+    <td><%=h missionario.email %></td>
+    <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
+    <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+
 <%= link_to 'Edit', edit_forania_path(@forania) %> |
 <%= link_to 'Back', foranias_path %>

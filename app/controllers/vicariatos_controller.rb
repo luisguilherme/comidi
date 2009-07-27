@@ -14,7 +14,8 @@ class VicariatosController < ApplicationController
   # GET /vicariatos/1.xml
   def show
     @vicariato = Vicariato.find(params[:id])
-
+    @coordenadores = @vicariato.coordenadores
+    
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @vicariato }

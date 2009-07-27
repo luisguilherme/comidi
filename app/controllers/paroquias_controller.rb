@@ -3,7 +3,6 @@ class ParoquiasController < ApplicationController
   # GET /paroquias.xml
   def index
     @paroquias = Paroquia.find(:all)
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @paroquias }
@@ -14,6 +13,7 @@ class ParoquiasController < ApplicationController
   # GET /paroquias/1.xml
   def show
     @paroquia = Paroquia.find(params[:id])
+    @coordenadores = @paroquia.coordenadores
 
     respond_to do |format|
       format.html # show.html.erb

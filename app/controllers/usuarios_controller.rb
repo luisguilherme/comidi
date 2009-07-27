@@ -80,6 +80,11 @@ class UsuariosController < ApplicationController
   # DELETE /usuarios/1.xml
   def destroy
     @usuario = Usuario.find(params[:id])
+    unless (@usuario.editable_by(Usuario.find(session[:usuario_id]))) 
+      flash[:notice] = 'Acesso negado'
+      redirect_to(usuarios_url)
+      return
+    end
     @usuario.destroy
 
     respond_to do |format|

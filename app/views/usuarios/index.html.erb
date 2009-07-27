@@ -11,8 +11,10 @@
     <td><%=h usuario.login %></td>
 
     <td><%= link_to 'Show', usuario %></td>
+    <% if usuario.editable_by(Usuario.find(session[:usuario_id])) %>
     <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
     <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
   </tr>
 <% end %>
 </table>

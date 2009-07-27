@@ -5,7 +5,7 @@
 
 <p>
   <b>Forania:</b>
-  <%=h @paroquia.forania %>
+  <%=h @paroquia.forania.vicariato.nome %> <%=h @paroquia.forania.numero %>
 </p>
 
 <p>
@@ -22,6 +22,7 @@
 <table>
   <tr>
     <th>Nome no Crachá</th>
+    <th>Função</th>
     <th>Idade</th>
     <th>Telefone</th>
     <th>Celular</th>
@@ -30,6 +31,7 @@
 <% for missionario in @coordenadores %>
   <tr>
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
+    <td><%= missionario.cargo.nome %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>
     <td>(<%=h missionario.ddd_casa -%>)<%=h missionario.telefone_casa %></td>
     <td>(<%=h missionario.ddd_celular -%>)<%=h missionario.telefone_celular %></td>

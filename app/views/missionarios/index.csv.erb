@@ -1,5 +1,5 @@
 Nome; Nome crachá; Endereço; Bairro; Cidade; Estado; CEP;
 <% @missionarios.each do |m| %>
-<%= m.nome -%>;<%= m.nome_cracha -%>;<%= m.endereco.tr(';',' ') -%>;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] -%>
+<%# tratamento -%> ;<%= m.nome -%>;(<%= m.nome_cracha -%>);<%# CAIXA POSTAL -%> ;<%= m.endereco.split(',')[0] -%>;<%= m.endereco.split(',')[1] -%> ;<%# COMPLEMENTO -%> ;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= if m.email.blank? then "naotem@email.com"; else m.email; end  -%>;(<%= m.ddd_casa -%>) <%= m.telefone_casa -%>; <%# FAX -%>;<%# cep Caixa Postal %> ;<%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] -%>
 <% end %>
 

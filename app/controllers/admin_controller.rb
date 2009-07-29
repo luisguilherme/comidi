@@ -8,8 +8,11 @@ class AdminController < ApplicationController
         session[:usuario_id] = usuario.id
         uri = session[:original_uri]
         redirect_to(uri || {:action => "index"})
+        return
       else
-        flash.now[:notice] = "Usuário ou senha inválidos"
+        flash[:notice] = "Usuário ou senha inválidos"
+        redirect_to request.referer
+        return
       end
     end
   end

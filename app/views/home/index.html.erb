@@ -1,0 +1,15 @@
+<h1>Boas vindas, <%= @missionario.nome_cracha -%></h1>
+<h2>Perfil missionário</h2>
+<h3>Atividades missionárias</h3>
+<%= @missionario.atividades %>
+<h3>Movimentos e pastorais</h3>
+<%= h(@missionario.movimentos_pastorais).gsub(/$/,'<br />') %>
+<div id='main-left'>
+<h2>Próximos eventos</h2>
+<h2>Próximas missões</h2>
+</div>
+<div id='main-right'>
+<h2>Mensagens recebidas</h2>
+</div>
+
+

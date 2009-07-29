@@ -1,18 +1,11 @@
-<div id="container">
-<div id="header">
-  <span id="diocese">Arquidiocese de São Sebastião do Rio de Janeiro</span>
-  <div id="div-h1">
-    <h1><span id="internal">Conselho Missionário Arquidiocesano</span></h1>
-  </div>
-</div>
-
 <div id="menu">
   <h2>Ajude as missões!</h2>
   <p>Ajude os diversos projetos missionários de nossa Arquidiocese:</p>
   
   <p class="vermelho">
-    BANCO BRADESCO (237)<br/>
-    AG 0814-1 (João Paulo II)<br /> 
+    BRADESCO (237)<br/>
+    AG 0814-1<br />
+    (João Paulo II)<br /> 
     CC 0074861-7<br />
     MITRA ARQUIEPISCOPAL DO RJ (MISSÕES)</p>
   <% if session[:usuario_id] %>
@@ -30,19 +23,24 @@
       <td>
   <%= label_tag 'login' %>
       </td><td>
-  <%= text_field_tag :login, nil, :size => 10 %>
+  <%= text_field_tag :login, nil, :size => 8 %>
       </td></tr>
     <tr> <td>
   <%= label_tag 'senha' %>
   </td><td>
-  <%= password_field_tag :password, nil, :size => 10 %>
+  <%= password_field_tag :password, nil, :size => 8 %>
   </td></tr></table>
   <%= submit_tag "Entrar" %>
   <% end %>
   <% end %>
 </div>
 
-<div id="info">
+<div id="main">
+  <h1>Conselho Missionário Arquidiocesano</h1>
+  <p class="subtitle">
+    Arquidiocese de São Sebastião do Rio de Janeiro
+  </p>
+  <div id="info">
   <h2>O COMIDI</h2>
   <p>
 O Conselho Missionário é um organismo que existe na Igreja Católica Apostólica Romana, em diferentes âmbitos: Paroquial (COMIPA), Diocese (COMIDI), Regional da CNBB (COMIRE) e Nacional (COMINA).</p>

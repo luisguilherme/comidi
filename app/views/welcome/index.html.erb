@@ -15,7 +15,12 @@
   <%= link_to 'Administrar', :controller => :admin %><br />
   <%= link_to 'Sair', :controller => :admin, :action => :logout %>
   <% else %>
-  <h2>Sou missionário!</h2>
+
+  <p>
+  <%= link_to '<strong>Quero me cadastrar!</strong>', :controller => :usuarios, :action => :new %>
+  </p>
+
+  <h2>Já sou missionário!</h2>
   <% form_tag('/admin/login') do %>
   
   <table>

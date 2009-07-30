@@ -1,4 +1,8 @@
-<h1>Listing usuarios</h1>
+<div id="menu">
+<%= link_to 'Criar usuário', new_usuario_path %>
+</div>
+<div id="main">
+<h1>Lista de usuários</h1>
 
 <table>
   <tr>
@@ -8,9 +12,7 @@
 
 <% for usuario in @usuarios %>
   <tr>
-    <td><%=h usuario.login %></td>
-
-    <td><%= link_to 'Show', usuario %></td>
+    <td><%=link_to h(usuario.login), usuario %></td>
     <% if usuario.editable_by(Usuario.find(session[:usuario_id])) %>
     <td><%= link_to 'Edit', edit_usuario_path(usuario) %></td>
     <td><%= link_to 'Destroy', usuario, :confirm => 'Are you sure?', :method => :delete %></td>
@@ -20,5 +22,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New usuario', new_usuario_path %>

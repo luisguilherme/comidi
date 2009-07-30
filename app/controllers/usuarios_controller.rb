@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 class UsuariosController < ApplicationController
+  layout "comidi"
+
   before_filter :authorize, :except => [:new, :create]
   # GET /usuarios
   # GET /usuarios.xml

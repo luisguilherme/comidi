@@ -1,5 +1,15 @@
-<h1>New usuario</h1>
+<div id="menu">
+  <%= link_to 'Voltar', request.referrer %>
+</div>
+<div id="main">
+<h1>Novo usuário</h1>
+<% unless session[:usuario_id] %>
+<p class="subtitle">
+  Crie um nome de usuário e senha para seu uso no sistema. 
+</p>
+<% end %>
+
 
 <%= render :partial => 'form' %>
 
-<%= link_to 'Back', usuarios_path %>
+</div>

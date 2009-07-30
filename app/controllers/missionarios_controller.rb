@@ -70,13 +70,17 @@ class MissionariosController < ApplicationController
     #end
     
     respond_to do |format|
+
       if @missionario.save
+        flash[:notice] = "Missionario criado: #{@missionario.nome_cracha}"
         coordenacao(params[:missionario][:cargo_id])
         unless @user.missionario
           @user.missionario = @missionario 
           @user.save
+          redirect_to :controller => :home
+          return
         end
-        flash[:notice] = "Missionario was successfully created. #{@user.missionario.nome_cracha}"
+        
         format.html { redirect_to(@missionario) }
         format.xml  { render :xml => @missionario, :status => :created, :location => @missionario }
       else

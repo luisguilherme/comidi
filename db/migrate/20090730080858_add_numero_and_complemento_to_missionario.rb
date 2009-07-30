@@ -10,7 +10,7 @@ class AddNumeroAndComplementoToMissionario < ActiveRecord::Migration
       nc.strip! if nc != nil
       n = nc
       if !nc.blank?
-        nsep = nc.split(' ')
+        nsep = nc.split(' ',2)
         n = nsep[0]
         c = nsep[1]
       end

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class HomeController < ApplicationController
+  layout "comidi"
   def index
     @user = Usuario.find(session[:usuario_id])
     if @user.missionario == nil 

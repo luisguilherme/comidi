@@ -97,7 +97,7 @@ class MissionariosController < ApplicationController
     params[:missionario][:sacramento_ids] ||= []
     @missionario = Missionario.find(params[:id])
     
-    if @missionario != user.missionario
+    if @missionario != @user.missionario
       return unless access_control
     end
 

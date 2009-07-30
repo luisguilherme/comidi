@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 class UsuariosController < ApplicationController
+  before_filter :authorize, :except => [:new, :create]
   # GET /usuarios
   # GET /usuarios.xml
   def index
@@ -26,7 +27,6 @@ class UsuariosController < ApplicationController
   # GET /usuarios/new.xml
   def new
     @usuario = Usuario.new(:nivel => 2)
-
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @usuario }
@@ -46,11 +46,28 @@ class UsuariosController < ApplicationController
   # POST /usuarios.xml
   def create
     @usuario = Usuario.new(params[:usuario])
+    user = session[:usuario_id]
+
+    flash[:notice] = ''
+    
+    if !user #usuario ainda não foi criado, está criando a si
+      @usuario.nivel = 2 #não pode se criar com poderes
+    else
+      usuario = Usuario.find(session[:usuario_id])
+      if !usuario || usuario.nivel == 2 # não pode criar outros usuários
+        flash[:notice] = 'Acesso negado'
+        redirect_to(:action => :index) #mudar depois
+      elsif usuario.nivel >= @usuario.nivel
+        flash[:notice] = 'Usuário criado com nível mais baixo do que o pedido <br />'
+        @usuario.nivel = usuario.nivel + 1 #não pode criar com tantos poderes quanto si mesmo
+      end
+    end
     
     respond_to do |format|
       if @usuario.save
-        flash[:notice] = 'Usuario #{@usuario.login} was successfully created.'
-        format.html { redirect_to(:action => :index) }
+        flash[:notice] += 'Usuario #{@usuario.login} was successfully created.'
+        session[:usuario_id] = @usuario.id unless session[:usuario_id] 
+        format.html { redirect_to(:controller => :home) }
         format.xml  { render :xml => @usuario, :status => :created, :location => @usuario }
       else
         format.html { render :action => "new" }

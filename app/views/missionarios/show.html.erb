@@ -1,3 +1,15 @@
+<div id="menu">
+  <ul>
+    <li><%= link_to 'Editar missionário', edit_missionario_path(@missionario) %> </li>
+    <li><%= link_to 'Listagem de missionários', missionarios_path %></li>
+  </ul>
+
+
+</div>
+
+<div id="main">
+  <h1><%=h @missionario.nome_cracha %></h1>
+    
 <p>
   <b>Nome:</b>
   <%=h @missionario.nome %>
@@ -49,6 +61,4 @@
   <%=h @missionario.movimentos_pastorais %>
 </p>
 
-
-<%= link_to 'Edit', edit_missionario_path(@missionario) %> |
-<%= link_to 'Back', missionarios_path %>
+</div>

@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 class MissionariosController < ApplicationController
+  layout "comidi"
+  before_filter [:authorize, :find_user]
   
-  # Isso funciona, mas é melhor fazer o cara criar um login primeiro
-  #before_filter :authorize, :except => :new
-
   # GET /missionarios
   # GET /missionarios.xml
   def index
@@ -40,8 +39,11 @@ class MissionariosController < ApplicationController
   # GET /missionarios/new
   # GET /missionarios/new.xml
   def new
-    @missionario = Missionario.new
-
+    @missionario = Missionario.new(:cargo => Cargo.find_by_nivel(5))
+    
+    return unless access_control
+      
+    
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @missionario }
@@ -51,17 +53,30 @@ class MissionariosController < ApplicationController
   # GET /missionarios/1/edit
   def edit
     @missionario = Missionario.find(params[:id])
+    if @user.missionario != @missionario 
+      return unless access_control
+    end
   end
 
   # POST /missionarios
   # POST /missionarios.xml
   def create
+    return unless access_control
     @missionario = Missionario.new(params[:missionario])
+    
+    #if @missionario.cargo.nivel < @nivelmin
+    #  flash[:notice] = 'Cargo não foi alterado.'
+    #  @missionario.cargo = Cargo.find_by_nivel(5)
+    #end
     
     respond_to do |format|
       if @missionario.save
         coordenacao(params[:missionario][:cargo_id])
-        flash[:notice] = "Missionario was successfully created. #{@message}"
+        unless @user.missionario
+          @user.missionario = @missionario 
+          @user.save
+        end
+        flash[:notice] = "Missionario was successfully created. #{@user.missionario.nome_cracha}"
         format.html { redirect_to(@missionario) }
         format.xml  { render :xml => @missionario, :status => :created, :location => @missionario }
       else
@@ -74,14 +89,24 @@ class MissionariosController < ApplicationController
   # PUT /missionarios/1
   # PUT /missionarios/1.xml
   def update
+    flash[:notice] = ''
     params[:missionario][:sacramento_ids] ||= []
     @missionario = Missionario.find(params[:id])
     
+    if @missionario != user.missionario
+      return unless access_control
+    end
+
+    cargo = Cargo.find(params[:missionario][:cargo_id])
+    if cargo.nivel < @nivelmin
+      flash[:notice] = 'Cargo não foi alterado.'
+      parms[:missionario][:cargo_id] = @missionario.cargo.id
+    end
 
     respond_to do |format|
       if @missionario.update_attributes(params[:missionario])
         coordenacao(params[:missionario][:cargo_id])
-        flash[:notice] = 'Missionario was successfully updated.'
+        flash[:notice] += 'Missionario was successfully updated.'
         format.html { redirect_to(@missionario) }
         format.xml  { head :ok }
       else
@@ -95,6 +120,11 @@ class MissionariosController < ApplicationController
   # DELETE /missionarios/1.xml
   def destroy
     @missionario = Missionario.find(params[:id])
+    unless @user.nivel <= 1
+      flash[:notice] = 'Acesso negado'
+      redirect_to(missionarios_url)
+      return
+    end
     @missionario.destroy
 
     respond_to do |format|
@@ -102,6 +132,8 @@ class MissionariosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+
+private
 
   def coordenacao(id) 
     cargo = Cargo.find(id)
@@ -126,6 +158,7 @@ class MissionariosController < ApplicationController
       @coordenacao.save
     end
   end
+
   def ordering
     ordering = session[:miss_order] || ["nome_cracha"]
     if params[:sort]
@@ -144,4 +177,35 @@ class MissionariosController < ApplicationController
     session[:miss_order].each { |f| @ordering += f + ", " }
     @ordering = @ordering[0..-3]
   end
+
+  def authorize
+    unless session[:usuario_id]
+      session[:original_uri] = request.request_uri
+      flash[:notice] = "Favor fazer login"
+      redirect_to :controller => :admin, :action => :login
+    end
+  end
+
+
+  def find_user
+    @user = Usuario.find(session[:usuario_id])
+  end
+
+  def access_control
+    if @user.missionario && @user.nivel > 1 && @user.missionario.cargo.nivel >= 5
+      flash[:notice] = "Acesso negado" 
+      redirect_to request.referrer
+      return false
+    elsif @user.missionario && @user.nivel > 1 && @missionario.cargo.nivel <= @user.missionario.cargo.nivel 
+    end
+    
+    @nivelmin = 5
+    if @user.nivel <= 1 
+      @nivelmin = 0
+    elsif @user.missionario 
+      @nivelmin = @user.missionario.cargo.nivel+1
+    end
+    return true
+  end
+
 end

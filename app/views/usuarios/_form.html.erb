@@ -6,18 +6,20 @@
     <%= f.text_field :login %>
   </p>
   <p>
-    <%= f.label :password %><br />
+    <%= f.label :password, "Senha (atenção, maiúsculas são diferentes de minúsculas)" %><br />
     <%= f.password_field :password %>
   </p>
   <p>
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, "Confirmação de senha" %><br />
     <%= f.password_field :password_confirmation %>
   </p>
+  <% if !@usuario.missionario && session[:usuario_id] %>
   <p>
     <%= f.label :missionario %>
     <%= f.collection_select :missionario_id, Missionario.find(:all), :id, :nome_cracha, { :include_blank => true } %>
   </p>
-  <% if Usuario.find(session[:usuario_id]).nivel == 0 %>
+  <% end %>
+  <% if session[:usuario_id] && Usuario.find(session[:usuario_id]).nivel == 0 %>
 <p>
   <%= f.label :nivel %>
   <%= f.select :nivel, [["Usuário",2],["Administrador",1],["Superusuário",0]] %>

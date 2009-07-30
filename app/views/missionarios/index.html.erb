@@ -1,9 +1,15 @@
-<h1>Missionários</h1>
 
-<%= link_to 'Cadastrar missionario', new_missionario_path %>
-<%= link_to 'Listar endereços', :action => :maladireta %>
-<%= link_to 'Tela principal', :controller => :admin %>
-<%= link_to 'Baixar planilha', missionarios_path + '.csv' %>
+<div id="menu">
+<ul>
+<li><%= link_to 'Cadastrar missionario', new_missionario_path %></li>
+<li><%= link_to 'Listar endereços', :action => :maladireta %></li>
+<li><%= link_to 'Tela principal', :controller => :admin %></li>
+<li><%= link_to 'Baixar planilha', missionarios_path + '.csv' %></li>
+</ul>
+</div>
+
+<div id="main">
+<h1>Missionários</h1>
 
 <table>
   <tr>

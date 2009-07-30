@@ -1,5 +1,17 @@
+<div id="menu">
+  <p> Preencha os dados com cautela para não cometer erros </p>
+  <p> Campos obrigatórios em negrito </p>
+  <p> O email não é obrigatório mas é vivamente recomendável </p>
+</div>
+
+<div id="main">
+<% if @user.missionario %> 
 <h1>Cadastrar missionário</h1>
-
-
+<% else %>
+<h1>Dados pessoais</h1>
+Escreva aqui os seus dados pessoais
+<% end %>
 <%= render :partial => 'form' %>
 <%= link_to 'Voltar', missionarios_path %>
+
+</div>

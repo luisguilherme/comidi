@@ -2,12 +2,12 @@
   <%= f.error_messages %>
 
   <p>
-    <%= f.label :nome %><br />
-    <%= f.text_field :nome, :size => 65 %>
+    <%= f.label :nome, "<strong>Nome</strong>" %><br />
+    <%= f.text_field :nome, :maxlength => 44, :size => 44 %>
   </p>
   <p>
-    <%= f.label :nome_cracha, "Como você gostaria de ser chamado? (nome no crachá)" %><br />
-    <%= f.text_field :nome_cracha, :size => 65 %>
+    <%= f.label :nome_cracha, "<strong>Como você gostaria de ser chamado? (nome no crachá)</strong>" %><br />
+    <%= f.text_field :nome_cracha, :size => 44 %>
   </p>
   <p>
     <%= f.label :nascimento %><br />
@@ -18,28 +18,28 @@
     :year ],  :include_blank => true  %>
   </p>
   <p>
-    <%= f.label :endereco %><br />
-    <%= f.text_field :endereco, :size => 65 %>
+    <%= f.label :endereco, "<strong>Endereço</strong>" %><br />
+    <%= f.text_field :endereco, :size => 55 %>
   </p>
   <p>
-    <%= f.label :bairro %><br />
+    <%= f.label :bairro, "<strong>Bairro</strong>" %><br />
     <%= f.text_field :bairro %>
   </p>
   <p>
-    <%= f.label :cidade %><br />
+    <%= f.label :cidade, "<strong>Cidade</strong>" %><br />
     <% defcid = @missionario.cidade; defcid = "Rio de Janeiro" if defcid == nil %> 
     <%= f.text_field :cidade, :value => defcid %>
   </p>
   <p>
-    <%= f.label :estado %><br />
+    <%= f.label :estado, "<strong>Estado</strong>" %><br />
     <%= f.collection_select :estado_id, Estado.find(:all), :id, :sigla, { :selected => 12 } %>
   </p>
   <p>
-    <%= f.label :cep, "CEP (só números)" %><br />
+    <%= f.label :cep, "<strong>CEP (só números)</strong>" %><br />
     <%= f.text_field :cep, :size => 6 %>
   </p>
   <p>
-    <%= f.label :paroquia, "Paróquia"  %><br /> 
+    <%= f.label :paroquia, "Paróquia (Bairro e nome)"  %><br /> 
     <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.bairro + " " + k.nome }, :id, :nome_e_bairro %>
   </p>
   <p>
@@ -90,10 +90,14 @@
     <%= f.label :movimentos_pastorais, "Movimentos ou pastorais de que participa (liste todos, um por linha)" %><br />
     <%= f.text_area :movimentos_pastorais %>
   </p>
+  <% if @user.missionario %>
   <p>
     <%= f.label :cargo, "Função no Conselho Missionário"  %><br /> 
-    <%= f.collection_select :cargo_id, Cargo.find(:all, :order => "nivel DESC"), :id, :nome  %>
+    <%= f.collection_select :cargo_id, Cargo.find(:all, :order => "nivel DESC", :conditions => { :nivel => @nivelmin..5 }), :id, :nome  %>
   </p>
+  <% else %>
+  <%= hidden_field :missionario, :cargo_id %>
+  <% end %>
   <p>
     <%= f.label :atividades, "O que você está disposto a fazer como trabalho missionário?" %><br />
     <%= f.text_area :atividades %>

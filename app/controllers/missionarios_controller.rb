@@ -189,12 +189,13 @@ private
 
   def find_user
     @user = Usuario.find(session[:usuario_id])
+    @nivelmin = 5
   end
 
   def access_control
     if @user.missionario && @user.nivel > 1 && @user.missionario.cargo.nivel >= 5
       flash[:notice] = "Acesso negado" 
-      redirect_to request.referrer
+      redirect_to request.referrer || { :controller => :home }
       return false
     elsif @user.missionario && @user.nivel > 1 && @missionario.cargo.nivel <= @user.missionario.cargo.nivel 
     end

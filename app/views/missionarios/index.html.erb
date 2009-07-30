@@ -27,13 +27,13 @@
   <tr>
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>
-    <td><%=h missionario.paroquia.nome -%> - <%=h missionario.paroquia.bairro %></td>
-    <td>(<%=h missionario.ddd_casa -%>) <%=h missionario.telefone_casa %></td>
-    <td>(<%=h missionario.ddd_celular -%>) <%=h missionario.telefone_celular %></td>
+    <td><%=h missionario.paroquia.nome -%><%# - %><%#=h missionario.paroquia.bairro %></td>
+    <td>(<%=h missionario.ddd_casa -%>)<%=h missionario.telefone_casa %></td>
+    <td>(<%=h missionario.ddd_celular -%>)<%=h missionario.telefone_celular %></td>
 
     <td><%=h missionario.email %></td>
-    <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
-    <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class='ed'><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
+    <td class='ed'><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

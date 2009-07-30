@@ -116,10 +116,32 @@ a:visited {
 .vermelho {
     color: #e0211a;
 }
+
 .subtitle {
     margin-top: -5px;
     padding-top: 1px;
 }
+
 .table {
     font-size: 11px;
 }
+/*
+.table table {
+    border: 1px solid #000;
+    border-width: 0 0 1px 1px;
+    border-spacing: 0px;
+    border-style: solid;
+    border-collapse: separate;
+}
+
+.table table th, .table table td {
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    padding: 0px;
+}
+
+.table table td.ed {
+    border-width: 1px 0 0 0;
+    padding: 1px;
+}
+*/

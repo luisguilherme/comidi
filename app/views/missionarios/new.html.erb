@@ -9,7 +9,9 @@
 <h1>Cadastrar missionário</h1>
 <% else %>
 <h1>Dados pessoais</h1>
-Escreva aqui os seus dados pessoais
+<p class="subtitulo">
+Seu login (<%= @user.login %>) foi criado! Agora informe os seus dados pessoais.
+</p>
 <% end %>
 <%= render :partial => 'form' %>
 <%= link_to 'Voltar', missionarios_path %>

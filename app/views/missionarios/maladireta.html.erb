@@ -4,7 +4,8 @@
 <% @missionarios.each do |m| %>
 <p class="maladireta">
 <%= m.nome -%><br />
-<%= m.endereco -%><br />
+<%= m.endereco -%>, <%= m.numero -%><br />
+<%= m.complemento -%> <br /> 
 <%= m.bairro -%><br />
 <%= m.cidade -%> - <%= m.estado.sigla -%><br />
 <span class='cep'><%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] %></span><br />

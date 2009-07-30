@@ -20,6 +20,11 @@
   <p>
     <%= f.label :endereco, "<strong>Endereço</strong>" %><br />
     <%= f.text_field :endereco, :size => 55 %>
+    <br />
+    <%= f.label :numero, "<strong>Número:</strong>" -%>
+    <%= f.text_field :numero, :size => 5 %>
+    <%= f.label :numero, "Complemento:" -%>
+    <%= f.text_field :numero, :size => 10 %>
   </p>
   <p>
     <%= f.label :bairro, "<strong>Bairro</strong>" %><br />

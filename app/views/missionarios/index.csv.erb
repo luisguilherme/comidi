@@ -1,5 +1,4 @@
-Nome; Nome crachá; Endereço; Bairro; Cidade; Estado; CEP;
-<% @missionarios.each do |m| %>
-<%# tratamento -%> ;<%= m.nome -%>;(<%= m.nome_cracha -%>);<%# CAIXA POSTAL -%> ;<%= m.endereco.split(',')[0] -%>;<%= m.endereco.split(',')[1] -%> ;<%# COMPLEMENTO -%> ;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= if m.email.blank? then "naotem@email.com"; else m.email; end  -%>;(<%= m.ddd_casa -%>) <%= m.telefone_casa -%>; <%# FAX -%>;<%# cep Caixa Postal %> ;<%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] -%>
+Tratamento ; Nome; Nome crachá; Caixa Postal ; Logradouro; Número ; Complemento ; Bairro; Cidade; Estado; Email ; Telefone ; FAX ; CEP CP ; CEP <% @missionarios.each do |m| %>
+<%# tratamento -%> ;<%= m.nome -%>;(<%= m.nome_cracha -%>);<%# CAIXA POSTAL -%> ;<%= m.endereco -%>;<%= m.numero -%> ;<%= m.complemento -%> ;<%= m.bairro -%>;<%= m.cidade -%>;<%= m.estado.sigla -%>;<%= if m.email.blank? then "naotem@email.com"; else m.email; end  -%>;(<%= m.ddd_casa -%>) <%= m.telefone_casa -%>; <%# FAX -%>;<%# cep Caixa Postal %> ;<%= "%05d-%03d" % [ m.cep.to_i / 1000, m.cep.to_i % 1000 ] -%>
 <% end %>
 

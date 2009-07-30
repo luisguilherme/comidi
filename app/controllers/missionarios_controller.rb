@@ -42,8 +42,7 @@ class MissionariosController < ApplicationController
     @missionario = Missionario.new(:cargo => Cargo.find_by_nivel(5))
     
     return unless access_control
-      
-    
+          
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @missionario }
@@ -53,9 +52,8 @@ class MissionariosController < ApplicationController
   # GET /missionarios/1/edit
   def edit
     @missionario = Missionario.find(params[:id])
-    if @user.missionario != @missionario 
-      return unless access_control
-    end
+    
+    return unless access_control 
   end
 
   # POST /missionarios
@@ -97,10 +95,8 @@ class MissionariosController < ApplicationController
     params[:missionario][:sacramento_ids] ||= []
     @missionario = Missionario.find(params[:id])
     
-    if @missionario != @user.missionario
-      return unless access_control
-    end
-
+    return unless access_control 
+    
     cargo = Cargo.find(params[:missionario][:cargo_id])
     if cargo.nivel < @nivelmin
       flash[:notice] = 'Cargo não foi alterado.'
@@ -193,22 +189,21 @@ private
 
   def find_user
     @user = Usuario.find(session[:usuario_id])
-    @nivelmin = 5
   end
 
   def access_control
-    if @user.missionario && @user.nivel > 1 && @user.missionario.cargo.nivel >= 5
+    if @user.missionario == nil || @user.missionario == @missionario || @user.nivel <= 1
+    elsif @user.missionario.cargo.nivel >= 5 || @missionario.cargo.nivel <= @user.missionario.cargo.nivel
       flash[:notice] = "Acesso negado" 
       redirect_to request.referrer || { :controller => :home }
       return false
-    elsif @user.missionario && @user.nivel > 1 && @missionario.cargo.nivel <= @user.missionario.cargo.nivel 
     end
     
     @nivelmin = 5
     if @user.nivel <= 1 
       @nivelmin = 0
     elsif @user.missionario 
-      @nivelmin = @user.missionario.cargo.nivel+1
+      @nivelmin = @user.missionario.cargo.nivel
     end
     return true
   end

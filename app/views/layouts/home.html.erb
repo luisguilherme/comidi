@@ -17,20 +17,9 @@
 	<p><%= flash[:notice] %></p>
       </div>
     </div>
-    <div id='menu'>
-      <ul>
-	<li><%= link_to 'Editar dados' %></li>
-	<li><%= link_to 'Mensagens' %></li>
-	<li><%= link_to 'Missões' %></li>
-	<li><%= link_to 'Eventos', :url => 'www.haerahu.com' %></li>
-	<li><%= link_to 'Sair do sistema', :controller => :admin, :action => :logout %></li>
-      </ul>
-    </div>
-
-    <div id='main'>
-      <%= yield  %>
-    </div>
     
+    <%= yield  %>
+        
     <div id='footer'>
       <div id='logo-ar'>
       <%= image_tag 'arquidiocese.png', :alt => "Logo da Arquidiocese" %>

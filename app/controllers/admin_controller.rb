@@ -9,7 +9,7 @@ class AdminController < ApplicationController
         uri = session[:original_uri]
         session[:original_uri] = nil
         flash[:notice] = uri
-        redirect_to(uri || {:action => "index"})
+        redirect_to(uri || {:controller => "home"})
         return
       else
         flash[:notice] = "Usuário ou senha inválidos"

@@ -1,3 +1,24 @@
+<div id='menu'>
+  <ul>
+    <li><%= link_to 'Editar dados' %></li>
+    <li><%= link_to 'Mensagens' %></li>
+    <li><%= link_to 'Missões' %></li>
+    <li><%= link_to 'Eventos', :url => 'www.haerahu.com' %></li>
+    
+    <% if @user.nivel <= 1 %>
+    <li><%= link_to 'Administrar', :controller => 'admin' %></li>
+    <% end %>
+    <% if @user.missionario && @user.missionario.cargo.nivel < 5 %>
+    <li><%= link_to 'Missionários', :controller => :missionarios %></li>
+    <% end %>
+  
+    <li><%= link_to 'Sair do sistema', :controller => :admin, :action => :logout %></li>
+</ul>
+</div>
+
+<div id='main'>
+  
+
 <h1><%= @missionario.nome_cracha -%></h1>
 <p class="subtitle">Boas vindas!</p>
 <h2>Perfil missionário</h2>
@@ -13,4 +34,5 @@
 <h2>Mensagens recebidas</h2>
 </div>
 
+</div>
 

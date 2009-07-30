@@ -7,6 +7,8 @@ class AdminController < ApplicationController
       if usuario 
         session[:usuario_id] = usuario.id
         uri = session[:original_uri]
+        session[:original_uri] = nil
+        flash[:notice] = uri
         redirect_to(uri || {:action => "index"})
         return
       else

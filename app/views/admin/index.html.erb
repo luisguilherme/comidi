@@ -1,6 +1,7 @@
+<div id="main">
 <h1>COMIDI - Conselho Missionário Arquidiocesano - Arquidiocese do Rio de Janeiro</h1>
 
-<p>Total de missionários cadastrados: 
+<p>Total de missionários cadastrados:
 <%= @num_missionarios -%></p>
 
 <%= link_to 'Missionários', missionarios_path -%> <br />
@@ -11,6 +12,7 @@
 
 <h2>Coordenadores diocesanos</h2>
 
+<div class="table">
 <table>
   <tr>
     <th>Nome no Crachá</th>
@@ -35,10 +37,12 @@
     <td>(<%=h missionario.ddd_celular -%>)<%=h missionario.telefone_celular %></td>
 
     <td><%=h missionario.email %></td>
-    <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
-    <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td class='ed'><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
+    <td class='ed'><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
+</div>
 
+</div>
 

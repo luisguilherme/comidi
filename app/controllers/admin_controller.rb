@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 class AdminController < ApplicationController
+  layout "comidi"
   def login
     session[:usuario_id] = nil
     if request.post?
       usuario = Usuario.autentica(params[:login],params[:password])
-      if usuario 
+      if usuario
         session[:usuario_id] = usuario.id
         uri = session[:original_uri]
         session[:original_uri] = nil

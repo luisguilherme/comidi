@@ -7,7 +7,6 @@ class Missionario < ActiveRecord::Base
   validates_uniqueness_of :email, :allow_blank => true
   validates_numericality_of :cep
   has_one :usuario
-  
   def editable_by(user)
     user.missionario == self || user.nivel <= 1
   end

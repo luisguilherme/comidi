@@ -94,6 +94,8 @@ class MissionariosController < ApplicationController
   def update
     flash[:notice] = ''
     params[:missionario][:sacramento_ids] ||= []
+    params[:missionario][:existe_telefone_attributes] ||= { }
+
     @missionario = Missionario.find(params[:id])
 
     return unless access_control

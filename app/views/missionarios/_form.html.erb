@@ -32,7 +32,7 @@
   </p>
   <p>
     <%= f.label :cidade, "<strong>Cidade</strong>" %><br />
-    <% defcid = @missionario.cidade; defcid = "Rio de Janeiro" if defcid == nil %> 
+    <% defcid = @missionario.cidade; defcid = "Rio de Janeiro" if defcid == nil %>
     <%= f.text_field :cidade, :value => defcid %>
   </p>
   <p>
@@ -44,34 +44,21 @@
     <%= f.text_field :cep, :size => 6 %>
   </p>
   <p>
-    <%= f.label :paroquia, "Paróquia (Bairro e nome)"  %><br /> 
+    <%= f.label :paroquia, "Paróquia (Bairro e nome)"  %><br />
     <%= f.collection_select :paroquia_id, Paroquia.find(:all).sort_by { |k| k.bairro + " " + k.nome }, :id, :nome_e_bairro %>
   </p>
-  <p>
-    Telefone residencial<br />
-    <%= f.label :ddd_casa, "DDD" -%>
-    <% defddd = @missionario.ddd_casa; defddd = "21" if @missionario.ddd_casa == nil %>
-    <%= f.text_field :ddd_casa, :value => defddd, :size => 1 -%>
-    <%= f.label :telefone_casa, "Telefone" -%>
-    <%= f.text_field :telefone_casa, :size => 7 -%>
-  </p>
-  <p>
-    Telefone comercial<br />
-    <%= f.label :ddd_trabalho, "DDD" -%>
-    <% defddd = @missionario.ddd_trabalho; defddd = "21" if @missionario.ddd_trabalho == nil %>
-    <%= f.text_field :ddd_trabalho, :value => defddd, :size => 1 -%>
-    <%= f.label :telefone_trabalho, "Telefone" -%>
-    <%= f.text_field :telefone_trabalho, :size => 7 -%>
-  </p>
-  <p>
-    Telefone Celular<br />
-    <%= f.label :ddd_celular, "DDD" -%>
-    <% defddd = @missionario.ddd_celular; defddd = "21" if @missionario.ddd_celular == nil %>
-    <%= f.text_field :ddd_celular, :value => defddd, :size => 1 -%>
-    <%= f.label :telefone_celular, "Telefone" -%>
-    <%= f.text_field :telefone_celular, :size => 7 -%>
-  </p>
-
+    <% @missionario.telefones.each do |telefone| -%>
+      <% fields_for "missionario[telefone_attributes][]", telefone do |ff| %>
+        <p>
+          <%= ff.label :ddd, "DDD" -%>
+          <%= ff.text_field :ddd, :size => 2, :maxlength => 2 -%>
+          <%= ff.label :numero -%>
+          <%= ff.text_field :numero, :size => 9 -%>
+          <%= ff.label :tipo_telefone, "Tipo" -%>
+          <%= ff.select :tipo_telefone, ["Residencial","Celular","Comercial"] -%>
+        </p>
+      <% end %>
+    <% end -%>
   <p>
     <%= f.label :email %><br />
     <%= f.text_field :email %>
@@ -85,8 +72,8 @@
     <%= f.label :sacramentos_recebidos %><br />
     <% for sacramento in Sacramento.find(:all) %>
     <div>
-      <%= check_box_tag "missionario[sacramento_ids][]", sacramento.id, 
-	  @missionario.sacramentos.include?(sacramento) %>
+      <%= check_box_tag "missionario[sacramento_ids][]", sacramento.id,
+          @missionario.sacramentos.include?(sacramento) %>
       <%= sacramento.nome %>
     </div>
     <% end %>
@@ -97,7 +84,7 @@
   </p>
   <% if @user.missionario %>
   <p>
-    <%= f.label :cargo, "Função no Conselho Missionário"  %><br /> 
+    <%= f.label :cargo, "Função no Conselho Missionário"  %><br />
     <%= f.collection_select :cargo_id, Cargo.find(:all, :order => "nivel DESC", :conditions => { :nivel => @nivelmin..5 }), :id, :nome  %>
   </p>
   <% else %>

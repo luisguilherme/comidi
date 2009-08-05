@@ -21,8 +21,7 @@
     <th>Vicariato</th>
     <th>Forania</th>
     <th>Paróquia</th>
-    <th>Telefone</th>
-    <th>Celular</th>
+    <th>Telefones</th>
     <th>Email</th>
   </tr>
 <% for missionario in @coordenadores %>
@@ -33,9 +32,7 @@
     <td><%=h missionario.paroquia.forania.vicariato.nome -%></td>
     <td><%=h missionario.paroquia.forania.numero -%></td>
     <td><%=h missionario.paroquia.nome -%> - <%=h missionario.paroquia.bairro %></td>
-    <td>(<%=h missionario.ddd_casa -%>)<%=h missionario.telefone_casa %></td>
-    <td>(<%=h missionario.ddd_celular -%>)<%=h missionario.telefone_celular %></td>
-
+    <td><% missionario.telefones.each do |f| -%>(<%=h f.ddd -%>)<%=h f.numero -%>[<%=h f.tipo_telefone[0]-%>]<br /><% end -%>
     <td><%=h missionario.email %></td>
     <td class='ed'><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
     <td class='ed'><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>

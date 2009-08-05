@@ -11,7 +11,7 @@
     <td><%= link_to h(missionario.nome_cracha), missionario  %></td>
     <td><%= missionario.cargo.nome %></td>
     <td><%=h (Date.today - missionario.nascimento).to_i/365 unless missionario.nascimento == nil %></td>
-    <td><% missionario.telefones.each do |f| -%>(<%=h f.ddd -%>)<%=h f.numero -%>[<%=h f.tipo_telefone[0]-%>]<br /><% end -%>
+    <td><% missionario.telefones.each do |f| -%>(<%=h f.ddd -%>)<%=h f.numero -%>[<%=h f.tipo_telefone[0..0]-%>]<br /><% end -%>
     <td><%=h missionario.email %></td>
     <td><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
     <td><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>

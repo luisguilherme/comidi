@@ -32,7 +32,7 @@
     <td><%=h missionario.paroquia.forania.vicariato.nome -%></td>
     <td><%=h missionario.paroquia.forania.numero -%></td>
     <td><%=h missionario.paroquia.nome -%> - <%=h missionario.paroquia.bairro %></td>
-    <td><% missionario.telefones.each do |f| -%>(<%=h f.ddd -%>)<%=h f.numero -%>[<%=h f.tipo_telefone[0]-%>]<br /><% end -%>
+    <td><% missionario.telefones.each do |f| -%>(<%=h f.ddd -%>)<%=h f.numero -%>[<%=h f.tipo_telefone[0..0]-%>]<br /><% end -%>
     <td><%=h missionario.email %></td>
     <td class='ed'><%= link_to 'Edit', edit_missionario_path(missionario) %></td>
     <td class='ed'><%= link_to 'Destroy', missionario, :confirm => 'Are you sure?', :method => :delete %></td>

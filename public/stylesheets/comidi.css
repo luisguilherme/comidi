@@ -1,7 +1,7 @@
 body {
     background: #ccf;
     font-family: "Helvetica", "Nimbus Sans", "Arial", sans-serif;
-    
+
 }
 #container {
     background: #fff;
@@ -24,9 +24,9 @@ body {
     padding: 0;
 }
 #notice p {
-    color: #000; 
-    background: #ff0; 
-    font-weight: bold; 
+    color: #000;
+    background: #ff0;
+    font-weight: bold;
     text-align: center;
 }
 
@@ -124,6 +124,9 @@ a:visited {
 
 .table {
     font-size: 11px;
+}
+.fieldWithErrors label {
+    background-color: #f00;
 }
 /*
 .table table {

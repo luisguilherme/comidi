@@ -42,7 +42,7 @@ class MissionariosController < ApplicationController
     @missionario = Missionario.new(:cargo => Cargo.find_by_nivel(5))
 
     return unless access_control
-    3.times { @missionario.telefones.build(:ddd => 21) }
+    2.times { @missionario.telefones.build(:ddd => 21) }
 
     respond_to do |format|
       format.html # new.html.erb
@@ -60,8 +60,8 @@ class MissionariosController < ApplicationController
   # POST /missionarios
   # POST /missionarios.xml
   def create
-    return unless access_control
     @missionario = Missionario.new(params[:missionario])
+    return unless access_control
 
     #if @missionario.cargo.nivel < @nivelmin
     #  flash[:notice] = 'Cargo não foi alterado.'
@@ -194,7 +194,8 @@ private
 
   def access_control
     if @user.missionario == nil || @user.missionario == @missionario || @user.nivel <= 1
-    elsif @user.missionario.cargo.nivel >= 5 || @missionario.cargo.nivel <= @user.missionario.cargo.nivel
+    elsif @missionario.cargo.nivel <= @user.missionario.cargo.nivel  ||
+        @user.missionario.cargo.nivel >= 5
       flash[:notice] = "Acesso negado"
       redirect_to request.referrer || { :controller => :home }
       return false

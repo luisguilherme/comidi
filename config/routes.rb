@@ -4,11 +4,14 @@ ActionController::Routing::Routes.draw do |map|
   map.connect 'missionarios/maladireta', :controller => 'missionarios', :action => 'maladireta'
   map.resources :missionarios
 
-  map.resources :paroquias
+  map.resources :paroquias, :has_many => :missionarios
 
-  map.resources :foranias #, :has_many => :paroquias
+  map.resources :foranias do |forania|
+    forania.resources :missionarios
+    forania.resources :paroquias, :has_many => :missionarios
+  end
 
-  map.resources :vicariatos #, :has_many => :foranias
+  map.resources :vicariatos , :has_many => :missionarios
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -28,7 +31,7 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
-  
+
   # Sample resource route with more complex sub-resources
   #   map.resources :products do |products|
   #     products.resources :comments

@@ -45,7 +45,7 @@
   </p>
   <p>
     <%= f.label :paroquia, "<strong>Paróquia</strong> (Bairro e nome)"  %><br />
-    <%= f.collection_select :paroquia_id, paroquias_sufraganeas, :id, :nome_e_bairro #.sort_by { |k| k.bairro + " " + k.nome }
+    <%= f.collection_select :paroquia_id, paroquias_sufraganeas.sort_by { |k| k.bairro + " " + k.nome }, :id, :nome_e_bairro
 %>
   </p>
   <fieldset id="telefones">

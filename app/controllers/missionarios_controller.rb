@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 class MissionariosController < ApplicationController
   layout "comidi"
-  before_filter [:authorize, :find_user]
+  before_filter [:authorize, :find_user ]
 
   # GET /missionarios
   # GET /missionarios.xml
   def index
     ordering
-    @missionarios = Missionario.find(:all, :include => :paroquia, :order => @ordering)
+    set_conditions
+    @missionarios = Missionario.find(:all, :include => :paroquia, :order => @ordering, :conditions => @conditions )
 
     respond_to do |format|
       format.html # index.html.erb
@@ -193,6 +194,23 @@ private
   def find_user
     @user = Usuario.find(session[:usuario_id])
   end
+
+
+  def set_conditions
+    @conditions = { }
+    if params[:paroquia_id]
+      @conditions[:paroquia_id] = params[:paroquia_id]
+    elsif params[:forania_id]
+      forania = Forania.find(params[:forania_id])
+      @conditions[:paroquia_id] = forania.paroquias.map { |p| p.id }
+    elsif params[:vicariato_id]
+      vicariato = Vicariato.find(params[:vicariato_id])
+      @conditions[:paroquia_id] = vicariato.paroquias.map { |p| p.id }
+    end
+  end
+
+
+
 
   def access_control
     if @user.missionario == nil || @user.missionario == @missionario || @user.nivel <= 1

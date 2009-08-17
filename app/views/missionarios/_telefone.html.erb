@@ -1,0 +1,10 @@
+<% fields_for "missionario[telefone_attributes][]", telefone do |ff| %>
+<p>
+<%= ff.label :ddd, "DDD" -%>
+<%= ff.text_field :ddd, :size => 2, :maxlength => 2 -%>
+<%= ff.label :numero -%>
+<%= ff.text_field :numero, :size => 9 -%>
+<%= ff.label :tipo_telefone, "Tipo" -%>
+<%= ff.select :tipo_telefone, ["Residencial","Celular","Comercial"] -%>
+</p>
+<% end -%>

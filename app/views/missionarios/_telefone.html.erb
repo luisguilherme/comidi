@@ -1,4 +1,4 @@
-<% fields_for "missionario[telefone_attributes][]", telefone do |ff| %>
+<% fields_for_telefone telefone do |ff| %>
 <p>
 <%= ff.label :ddd, "DDD" -%>
 <%= ff.text_field :ddd, :size => 2, :maxlength => 2 -%>
